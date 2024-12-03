@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Site exemplo</title>
+</head>
+<body>
+    <main>
+        <h1>Site de exemplo</h1>
+        <h2>Título 1</h2>
+        <p>Nesse exemplo, vamos mostrar alguns parâmetros CSS aplicados em um arquivo externo.</p>
+    
+        <h2>Código CSS explicado</h2>
+    <p>
+    <pre>
+
+/*Regra para acentuação*/
+@charset "UTF-8";
+
+/*Seletor * para definições globais*/
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/**/
+body{
+    background-image: linear-gradient(to right,#1A6566,#5D8A66);
+}
+
+/*
+border-radius - curva da border-radius
+box-shadow: quanto pra direita - baixo - espalhamento - cor
+width - tamanho do seletor main na tela 
+padding - folga entre a borda e o texto
+margin: auto - main sempre centralizado
+*/
+main{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px #211023;
+    width: 500px;
+    padding: 10px;
+    margin: auto;
+}
+
+/*
+text-shadow - da mesma forma que box-shadow
+*/
+h1{
+    color: #1d0e1f;
+    text-align: center;
+    text-shadow:1px 1px 2px #1d0e1f63;
+}
+
+
+h2{
+    color: #1d0e1f
+}
+
+
+p{
+    text-align: justify;
+}
+    </pre>
+    </p>
+    </main>
+</body>
+</html>

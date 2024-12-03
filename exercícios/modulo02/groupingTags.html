@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            font-family: Calibri, 'Trebuchet MS', sans-serif;
+            background-color: darkgray;
+            text-indent: 15px;
+        }
+        p{
+            text-align: justify;
+        }
+
+        header{
+            background-color: lightgray;
+            border-radius: 8px;
+        }
+        nav{
+            background-color: darkolivegreen;
+            border-radius: 0px 0px 8px 8px;
+        }
+
+        footer{
+            text-align: center;
+            background-color: darksalmon;
+            font-size: 12px;
+        }
+        a{
+            margin: 10px;
+            text-decoration: none;
+        }
+        header > a:hover{
+            text-decoration: underline;
+        }
+    </style>
+
+
+    <title>Grouping Tags</title>
+</head>
+<body>
+    <header>
+        <h1>Grouping Tags</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+        
+        
+    </header>
+    
+    <main>
+        <section id="introducao">
+            <article>
+                <h2>Introdução</h2>
+                <p>Grouping Tags são tags que dividem o corpo do site em header (cabeçalho), main (conteúdo principal) e footer(rodapé).</p>
+
+                <p>Dentro destes, podem ser inseridas outras tags para organizar o conteúdo - article, section, aside,... . E para personalizar, para cada grouping tag, cria-se uma personalização diferente no CSS</p>
+            </article>
+        </section>
+
+        <section id="Desenvolvimento">
+            <article>
+                <h2>Desenvolvimento</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore animi reiciendis pariatur nam provident itaque. Unde quod delectus nisi, culpa magni repellendus facilis id nam, expedita doloribus molestiae modi eum.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum numquam repellendus aspernatur esse vero necessitatibus doloribus itaque ut? Commodi corrupti eligendi blanditiis aliquid, omnis quaerat beatae debitis minus culpa inventore?</p>
+            </article>
+        </section>
+
+        <h2>Sombras</h2>
+        <p>Tag <strong>box-shadow</strong> com 5 parâmetros: 1º - horizontal, 2º Vertical, 3º Blur, 4º Espalhamento, 5º Cor.</p>
+
+        <p>Sempre usar com transparência e quase imperceptível.</p>
+
+        <h2>Bordas</h2>
+        <p>Arredondamento da borda usando <strong>border-radius</strong>. Se forem passados 4 parâmetros (em cima esquerda, em cima direita, embaixo direita, embaixo esquerda). Um único parâmetro é para todos. Dois parâmetros, primeiro é em cima esquerda e embaixo direita.</p>
+
+        <p>Dica: border-radius: 50% - bordas redondas</p>
+
+        <p>Bordas compostas por imagens - usando as tags <br> 
+        border-image-source: url(caminho arquivo); <br>
+        border-image-slice: 10px;
+        border-imagem-repet: repeat;
+        </p>
+        <p>No shorthand: <br>
+        border-image: url(caminho arquivo) 10px repeat
+        </p>
+        <p>Para que funcione corretamente, usar imagens de tamanho 80px x 80px e baixa resolução (70x70).</p>
+    </main>
+    
+    <footer>
+        Desenvolvido por Luciano - Curso em Vídeo
+    </footer>
+    
+</body>
+</html>

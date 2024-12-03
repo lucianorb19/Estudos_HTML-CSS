@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            font-family:Calibri, sans-serif;
+        }
+
+        p{
+            text-align: justify;
+        }
+    </style>
+
+
+
+
+    <title>Tipografia</title>
+</head>
+<body>
+    <h1>Tipografia</h1>
+
+    <img src="tipografia1.png" alt="Tipografia 1" width="500">
+    <hr>
+    <img src="serifa.png" alt="Serifa" width="500">
+    <hr>
+    <img src="geometricos.png" alt="Componentes Geométricos" width="500">
+    <hr>
+    <img src="anatomicos.png" alt="Componentes Anatômicos" width="500">
+
+    <p>
+        <strong>Glifo</strong> - Letra <br>
+        Conjunto de glifos de uma determinada família - <strong>Fonte</strong> <br>
+        <strong>Família Tipográfica</strong> - Letras de uma mesma fonte, mas com variações. Cada uma dessas variações pertence a uma família tipográfica
+        <strong>Categoria</strong> - uma característica da fonte (fonte serifada é uma categoria, fonte sans-serif (sem serifa) é uma categoria, monoespaçada,hadwriting,display,...)
+    </p> 
+
+    <h1>Web Safe Font Combination</h1>
+    <p>É uma técnica que se baseia em declarar, na CSS, várias fonts para o parâmetro font-family, porque caso o dispositivo não possua uma das fontes, ele tenta usar a fonte seguinte, que possui propriedades parecidas.</p>
+
+    <p>Nesse mesmo contexto, ao invés de usar uma fonte, também pode ser usado um valor de categoria. Nesse caso, o próprio dispositivo escolhe a fonte pela categoria.</p>
+
+    <h1>Tamanhos de Fontes</h1>
+    <p>Configurada na tag <strong>font-size</strong>, as medidas mais recomendadas são <strong>px e em</strong>. Por padrão, o tamanho da fonte nos navegadores é 16px. <br>
+    <strong>16px = 1em</strong>
+    </p>
+    
+    <h2>Medidas Absolutas</h2>
+    <p>cm, mm, in (inche-polegada), px, pt, pc (paica? )</p>
+
+    <h2>Medidas Relativas</h2>
+    <ul>
+        <li>em - relativa ao tamanho da altura M maiúsculo da fonte
+        <li> ex - relativa à altura x da fonte 
+        <li>rem - relativa à altura M maiúsculo configurada no root
+        <li>vw (view-width) - relativa à largura da tela
+        <li>vh (view-hight) - relativa à altura da tela
+        <li>% - porcentagem da tela
+    </ul>
+
+    <h2>Peso da Fonte</h2>
+    <p>O quanto de negrito é aplicado à fonte, usando à tag <strong>font-weight</strong>. As variações são <strong>lighter / normal / bold / bolder</strong> ou de <strong>100 a 900</strong>. Importante ressaltar que a maioria das fontes não aceita todas essas variações.
+    </p>
+
+    <h2>Font Style</h2>
+    <p>Tag que permite mudar o estilo da fonte. Suas variações são italic / normal / oblique / initial /.... Nem todas as fontes tem essas variações.</p>
+
+    <h2>Text-decoration</h2>
+    <p>Tag que assume valor <strong>underline</strong> e deixa o texto sublinhado.</p>
+
+    <h2>ShortHand</h2>
+    <p>Técnica de simplificar a declaração dos parâmetros da fonte.É preciso escrever na ordem <br> font-style-> font-weight-> font-size-> font-family. <br>
+    E caso não haja algum parâmetro, só é preciso omití-lo e continuar seguindo a ordem. <br>
+    Ao invés de escrever</p>
+    <pre>
+    <code>
+    h1 {
+        font-family: 'Work Sans', sans-serif;
+        font-weight: bolder;
+        font-size: 3em;
+        font-style: italic;
+    }
+    </code>
+    </pre>
+
+    se escreve:
+    <pre><code>
+    font: italic bolder 3em 'Work Sans', sans-serif;    
+    </code></pre>
+    
+</body>
+</html>

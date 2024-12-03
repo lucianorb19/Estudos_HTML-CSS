@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        p{
+            text-align: justify;
+        }
+    </style>
+
+    <title>Cores no CSS</title>
+</head>
+<body>
+    <h1>Cores nas CSS</h1>
+
+    <h2 style="background-color: blue; color: white;">Exemplo</h2>
+    <p>Cores usando tag style="backgroud-color: <strong>cores padrão / nomes"</strong></p>
+
+    <h2 style="background-color: #0000ff; color: #ffffff;">Exemplo</h2>
+    <p>Cores usando tag style + <strong>código hexadecimais</strong>. <br>
+    #0022ff (00 é red, 22 é green, ff é blue)
+    </p>
+
+    <h2 style="background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);">Exemplo</h2>
+    <p>Cores usando tag style + <strong>código rgb</strong>. <br>
+       background-color: rgb(0, 0, 255) <br>
+       Código variam de 0 a 255
+    </p>
+
+    <h2 style="background-color: hsl(240, 100%, 50%); color: hsl(0, 0%, 100%);">Exemplo</h2>
+    <p>Cores com tag style + <strong>HSL (Hue - matiz,S-Saturation, L - lightness)</strong>. <br>
+      Matiz é 0 a 341, Saturação é %, Lightness é % 
+    </p>
+
+    <p>Dica: Passando o mouse sobre a cor, na tag, é possível mudar o método (cores padrão / nome, hexadecimal,....) e as cores / tonalidades / transparência</p>
+
+
+    <h1>Paleta de Cores</h1>
+    <P>Usar entre 3 e 5 cores (ou variações) do círculo cromático. Usar como cor primária a cor da logo do cliente.</P>
+
+    <img src="circulo-cromatico.png" alt="Círculo Cromático" width="400">
+
+    <h2>Cores complementares</h2>
+    <p>São aquelas que se contrastam mais. Estão em sentidos opostos na representação em círculo.</p>
+
+    <h2>Cores análogas</h2>
+    <p>São aquelas que mais se assemelham. Estão ao lado da cor atual.</p>
+
+    <h2>Cores análogas+complementar</h2>
+    <p>Usar uma cor principal, duas análogas, e uma complementar à principal</p>
+
+    <h2>Cores análogas relacionadas</h2>
+    <p>Uma cor principal, uma análoga de um lado, e para o outro lado, pular a imadiatamente análoga e usar a próxima.</p>
+
+    <h2>Cores intercaladas</h2>
+    <p>Escolher cores intercaladas, pulando uma ou duas cores. <br>
+       Cores triádicas são cores intercaladas pulando três cores. <br>
+       Cores em quadrado - pulando duas cores. <br>
+       Cores tetrádicas - duas cores e suas respectivas complementares.
+    </p>
+
+    <h2>Monocromia</h2>
+    <p>Utilizar uma cor + 3 variações dela (saturação e luminosidade)</p>
+
+    <h2>Criação de paletas</h2>
+    <p>Acessar <strong>color.adobe.com</strong> e escolher modo RGB. Lá serão gerados os códigos para as cores, de acordo com o estilo (intercaladas, monocromáticas, triádicas,....)</p>
+
+    <p>Em extrair tema, é possível adicionar uma imagem para que o site gere a paleta. <br>
+    <strong>paletton.com</strong> - gera paletas e mostra um site de exemplo. <br>
+    <strong>coolors.com</strong> - gera paletas aleatórias com cores que se combinam. <br>
+    <strong>Colorzila</strong> - extensão do chroome que permite extrair as cores de um site.
+    </p>
+
+    <p>Dica: mockFlow.com - site para criar rascunho do wireframe do site.</p>
+    <p>Dica: Facilitar a utilização de cores criando variáveis globais que assumem valores de cores. Isso deve ser feito na pseudoclasse root, onde as variáveis são globais.</p>
+    <pre><code>
+    :root{
+        --cor0:#código hexadecimal;
+        --cor1:#código hexadecimal;
+    }
+    </code></pre>
+
+    <p>E na utlização:</p>
+    <pre><code>
+    backgroud-color: var(--cor0);
+    color: var(--cor1);
+    </code></pre>
+    
+    
+</body>
+</html>

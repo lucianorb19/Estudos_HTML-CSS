@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+        @font-face {
+            font-family: 'transformers';
+            src: url(Transformers\ Movie.ttf)     format(truetype);
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        h1{
+            font-family: Chakra Petch;
+            font-size: 30px;
+        }
+
+        h2{
+            font-family: 'transformers';
+        }
+
+        p{
+            text-align: justify;
+            text-indent: 20px;
+        }
+
+    </style>
+    
+    <title>Fontes</title>
+</head>
+<body>
+    <h1>Fontes</h1>
+    <h2>Google Fontes</h2>
+    <p>Para utilizar fontes do Google Fontes, é preciso acessar o site, escolher a fonte, selecionar quais variações você deseja, e selecionar <strong>@import</strong>. Copiar o código resultando e adicionar à CSS. O código CSS é uma regra que importa a fonta toda vez que a página é acessada. </p>
+
+
+    <h2>Download de Fontes</h2>
+    <p>Também é possível fazer o download do arquivo da fonte (formato otf, ttf). Basta acessar algum site que ofereça esse serviço, como o <strong>dafonte.com</strong>. Se atentar para usar uma fonte que tenha glifos acentuados e minúsculo/maiúsculo, caso seja necessário.</p>
+
+    <p>Após o download, colocar os arquivos na pasta do projeto e usar dentro do style a tag/regra:</p>
+    <pre><code>
+    @font-face{
+        font-family: ;
+        src: url() format(),
+             url() format();
+    }
+    </code></pre>
+
+    <p>O valor para font-family é um nome que você quiser. Em url é o caminho do arquivo fonte, e em format é um valor que depende do formato do arquivo fonte e do navegador</p>
+    <ul>
+        <li>opentype - (otf)</li>
+        <li>truetype - (ttf)</li>
+        <li>embedded-opentype</li>
+        <li>truetype-aat (Apple Advanced Typography)</li>
+        <li>svg</li>
+    </ul>
+
+    <p>Tendo tudo isso configurado, só é preciso utilizar a font-family de nome escolhido na configuração CSS dos seletores. No exemplo há dois url e dois format porque podem ser configuradas duas fontes/formatos de fonte ao mesmo tempo (ou mais).</p>
+
+    <h2>Captura de Fontes</h2>
+    <p><strong>Extensão Fonts Ninja do Chrome</strong> - possibilita identificar a font-family de <strong>qualquer texto na tela</strong>. Tendo o nome, é possível baixar a fonte ou usá-la embedada.</p>
+
+    <p>Para identificar a <strong>fonte dentro de uma imagem</strong> podem ser usadas <strong>3 site</strong>:</p>
+    <ul>
+        <li>whatfontis.com</li>
+        <li>fontsquirrel.com</li>
+        <li>myfonts.com</li>
+    </ul>
+
+    <h2>Alinhamento de Texto</h2>
+    <p>Nos seletores CSS, com o parâmetro <strong>text-align</strong>, recebendo os valores <strong>center, right, left, justify</strong>.</p>
+
+    <p>Para fazer com que a primeira linha do parágrafo tenha mais recuo, parâmetro <strong>text-ident</strong>, com valor em <strong>px</strong>(20 a 30 ou mais). Para definir a distância horizontal entre as linhas, <strong>line-height</strong>.</p>
+
+
+</body>
+</html>

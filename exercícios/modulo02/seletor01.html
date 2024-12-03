@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    
+    <title>Seletores Personalizados com ID e Class</title>
+</head>
+<body>
+    <h1 id="principal">Usando ID 1</h1>
+    <h1>Usando ID 2</h1>
+    <h2>Usando ID 3</h2>
+    <p>O ID serve pra diferenciar um seletor dos demais. Assim, pode ser aplicada uma configuração CSS personalizada somente para este seletor.</p>
+
+    <p>Para criar um seletor com id, colocar como parâmetro da tag de abertura dele <span class="destaque">id="nome"</span>, com nome sendo o que você escolher.</p>
+
+    <p>E para configurá-lo no CSS, usar <span class="destaque">#nome{}</span>, passando as configurações desejadas.</p>
+
+    <p>Dica: Em HTML é id, em CSS é # / em html é class, em CSS é .
+    </p>
+
+    <p>Dica: Só se deve usar um id por seletor na página HTML. Colocando o mesmo id para vários seletores, funciona, mas não é a recomendação do W3E. Nesse caso, usaria-se a class</p>
+
+    <h2 class="ultima">Usando Class</h2>
+    <p>A class é usada para aplicar a mesma configurações a vários seletores, quando isso for pertinente. Para criar seletores com class, usar na tag de abertura <strong>class="nome"</strong>, e usar <strong>.nome{}</strong> para configurar na CSS</p>
+
+    <h2 class="ultima">Usando Class 2</h2>
+    
+    <p>Dica: Podem ser usadas mais de uma classe no seletor - class="nome nome2". E também podem ser usados class e id no seletor - id="nome" class="nome".</p>
+
+    <p>Dica: tag span pode ser usada somente para selecionar algum trecho de texto a aplicar id/class a ele</p>
+
+    <p>Dica: Id sobrepõe class</p>
+
+        <ul class="destaque">
+            <li>ID - html id='nome' - CSS #</li>
+            <li>Class - html class='' - CSS .nome{}</li>
+        </ul>
+
+</body>
+</html>

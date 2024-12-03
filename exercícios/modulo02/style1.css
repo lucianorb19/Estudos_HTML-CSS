@@ -1,0 +1,51 @@
+/*Regra para acentuação*/
+@charset "UTF-8";
+
+/*Seletor * para definições globais*/
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body{
+    background-image: linear-gradient(to right,#1A6566,#5D8A66);
+}
+
+/*
+border-radius - curva da border-radius
+box-shadow: quanto pra direita - baixo - espalhamento - cor
+width - tamanho do seletor main na tela 
+padding - folga entre a borda e o texto
+margin: auto - main sempre centralizado
+*/
+main{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px #211023;
+    width: 500px;
+    padding: 10px;
+    margin: auto;
+}
+
+/*
+text-shadow - da mesma forma que box-shadow
+*/
+h1{
+    color: #1d0e1f;
+    text-align: center;
+    text-shadow:1px 1px 2px #1d0e1f63;
+}
+
+
+h2{
+    color: #1d0e1f
+}
+
+
+p{
+    text-align: justify;
+}
+
+body > #destaque{
+    background-color: yellow;
+}

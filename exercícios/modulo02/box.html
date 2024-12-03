@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            font-family: Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        p{
+            text-align: justify;
+        }
+
+    </style>
+
+    <title>Caixas</title>
+</head>
+<body>
+    <h1>Box / Caixa - HTML5-CSS3</h1>
+
+    <img src="imagens/1.png" alt="1" width="300">
+    <hr>
+    <img src="imagens/2.png" alt="1" width="300">
+    <hr>
+    <img src="imagens/3.png" alt="1" width="300">
+    <hr>
+    <img src="imagens/4.png" alt="1" width="300">
+    <hr>
+    <img src="imagens/5.png" alt="1" width="400">
+    <hr>
+    <img src="imagens/6.png" alt="1" width="400">
+    <p>Para configurar os elementos fora da sua definição padrão, usar<strong> diplay=block, diplay=inline ou display=inline-block;</strong>.</p>
+    <hr>
+
+    <h1>Na prática</h1>
+    <p>Parâmetros que assumem valores <strong>auto</strong>, centralizam automanticamente o elemento na tela.</p>
+
+    <p>A borda se configura com <strong>border-width</strong>, <strong>border-style</strong> e <strong>border-color</strong>.</p>
+
+    <pre><code>
+    border-width: 10px;
+    border-style: solid;
+    border-color: gray;
+    </code></pre>
+
+    <p>Abreviado com shorthand:</p>
+    <pre><code>
+    border: 10px solid gray;
+    </code></pre>
+
+    <p>Padding é configurado com <strong>padding-top, padding-right, padding-bottom e padding-left.</strong></p>
+
+    <pre><code>
+    padding-top: 5px;
+    padding-right: 7px;
+    padding-bottom: 6px;
+    padding-left: 2px;
+    </code></pre>
+
+    <p>Abreviado com shorthand:</p>
+    <pre><code>
+    padding: 5px 7px 6px 2px;
+    </code></pre>
+
+    <p>Se forem iguais:</p>
+    <pre><code>
+    padding: 5px;
+    </code></pre>
+
+    <p>Se forem colocadas duas medidas, a primeira é top e bottom, e a segunda é right left.</p>
+
+    <p>Margin é configurado com <strong>margin-top, margin-right, margin-bottom e margin-left. margin:auto</strong> centraliza a caixa no meio da página.</p>
+
+    <p>Para shorthand da margin, da mesma forma que o padding.</p>
+
+    <p>Entre a borda e a margin, há o outline, que ocupa parte do espaço da margin. Ela pode ser configurado com outline-width</strong>, <strong>outline-style</strong> e outline-color.</p>
+
+    <pre><code>
+        outline-width: 10px;
+        outline-style: solid;
+        outline-color: gray;
+        </code></pre>
+    
+        <p>Abreviado com shorthand:</p>
+        <pre><code>
+        outline: 10px solid gray;
+        </code></pre>
+
+    <h2>Responsividade com box</h2>
+    
+    <p>A responsividade, de maneira rudimentar, pode ser aplicada utilizando os parâmetros <strong>min-width, max-width e margin: auto</strong> para tags como main, header e footer. Assim, a medida que a tela diminui ou aumenta, o elemento assume proporções estéticas.</p>
+    
+    <p>Para imagens, pode-se usar o parâmetro <strong>width:100%</strong> (para imagens grandes e de qualidade), e para imagens <strong>pequenas</strong>, mantê-las em <strong>50%</strong> ou definir uma max-width que seja adequada. Outra alternativa é usar imagens dinêmicas.</p>
+    <p>Dica: Para centralizar img, <strong>não basta o margin:auto</strong>, é preciso usar também <strong>display:block;</strong></p>
+    <p>Dica: Ferramenta para simular tamanhos específicos de tela no navegador - <strong>extensão window resizer</strong></p>
+
+    <h2>Responsividade para Vídeos com Iframe</h2>
+    <p>Para tornar vídeos responsivos, envelopar a tag iframe em uma div e definir na tag div a classe video.</p>
+    <pre><code>
+    div class='video'
+        iframe width="560" height="315"......
+    div
+    </code></pre>
+
+    e na CSS, configurar dois seletores da seguinte forma
+    <pre><code>
+    div.video{
+        margin: 0px -20px 30px -20px;/*margem negativa expande para o lado de dentro*/
+        padding:20px;
+        padding-bottom: 58%; /*Essa porcentagem varia de acordo com o vídeo*/
+        position: relative;
+    }
+
+    div.video >iframe{
+        position: absolute; /*possibilita alterar diversos parâmetros*/
+        top: 5%; /*distância entre a borda do vídeo e a borda da div*/
+        left: 5%; /*distância entre a borda do vídeo e a borda da div*/
+        width: 90%; 
+        height: 90%;
+    }
+    </code></pre>
+</body>
+</html>

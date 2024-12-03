@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        
+        div > p{/*para os parágrafos filhos de div (que estão dentro da div)*/
+            display:none; /*Não mostrar na tela*/
+            background-color: red;
+        }
+
+        div:hover > p{
+        display: block;
+        text-align: left;
+        }
+
+        .destaque{
+        background-color: rgba(251, 251, 132, 0.527);
+        }
+    </style>
+
+    <title>Hover</title>
+</head>
+<body>
+    <h1>Pseudo-Classe com Parágrafo Filho da Div</h1>
+
+    <p>Dentro desse conceito, tem como criar um parágrafo dentro da div e fazer algo específio nele com as pseudoclasses.</p>
+
+    <p>Primeiro, para definir que algo vai ser feito dentro das tags p que estão dentro de uma div, usar na CSS:</p>
+    <pre><code>
+    div > p{/*para os parágrafos filhos de div (que estão dentro da div)*/
+            display:none; /*Não mostrar na tela*/
+    }
+    </code></pre>
+    <p>Dica: <strong>div > p</strong> se refere a todas as tags p diretamente dentro de tag div. Para referenciar qualquer tag p (direta e indiretamente) dentro de div, usa-se <strong>div p</strong></p>
+
+    <p>Logo, todos parágrafos dentro de div não serão mostrados na tela. Para fazer com que apareçam, cria-se uma pseudoclasse div:hover >p{} na CSS, que é uma pseudo-classe para todos os parágrafos filhos de div, onde se passa o mouse em cima.</p>
+
+    <pre><code>
+    div:hover > p{
+        display: block;
+        width: 200px;
+    }
+    </code></pre>
+
+    <div id="d4">
+    Pase o mouse aqui
+    <p>Texto seceto! </p>
+    </div>
+
+    <ul class="destaque">
+        <li>ID - html id='nome' - CSS #</li>
+        <li>Class - html class='' - CSS .nome{}</li>
+        <li>Pseudo-Class - Na CSS seletor:ação{} (div:hover{}) </li>
+        <li>Pseudo-Elemento - Na CSS seletor::posição (a::after{content: ' [link]'})</li>
+    </ul>
+    
+</body>
+</html>

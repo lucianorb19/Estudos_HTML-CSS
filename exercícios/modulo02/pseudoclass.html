@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div{
+            display: inline-block;
+            background-color: lightcoral;
+            text-align: center;
+            border: 1px solid black;
+            height: 100px;
+            width: 100px;
+        }
+
+        div:hover{
+            background-color: yellow;
+            transition-duration: 0.5s;
+        }
+
+        div > p{/*para os parágrafos filhos de div (que estão dentro da div)*/
+            display:none; /*Não mostrar na tela*/
+        }
+
+        div:hover > p{
+        display: block;
+        text-align: left;
+        width: 200px;
+        }
+
+        .destaque{
+        background-color: rgba(251, 251, 132, 0.527);
+        }
+
+    </style>
+
+
+
+
+    <title>Pseudo-Classes</title>
+</head>
+<body>
+    <h1>Pseudo-Classes</h1>
+    <p>Pseudo-classes são classes específicas para determinados estados, criadas na CSS. Por exemplo, uma pseudo-classe hover, que faz com que, o seletor ligado a ela faça algo específico quando o mouse passa em cima do seu seletor.</p>
+
+    <div id="d1">01</div>
+    <div id="d2">02</div>
+    <div id="d3">03</div>
+
+    <p>Dica: <strong>Transition duration: Xs;</strong> - atrasa o efeito do hover em X segundos.</p>
+
+    <ul class="destaque">
+        <li>ID - html id='nome' - CSS #</li>
+        <li>Class - html class='' - CSS .nome{}</li>
+        <li>Pseudo-Class - Na CSS seletor:ação{} (div:hover{}) </li>
+        <li>Pseudo-Elemento - Na CSS seletor::posição (a::after{content: ' [link]'})</li>
+    </ul>
+
+</body>
+</html>

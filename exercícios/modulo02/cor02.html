@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+       /* *{height: 60%;} */
+        body{
+            background-image: linear-gradient(to right,#5060D0,#B5309A,#DC2974,#F76B2D,#FED074);
+            background-attachment: fixed;
+
+            text-align: justify;
+        }
+    </style>
+    
+    <title>Gradiente em CSS</title>
+</head>
+<body>
+    <h1>Testando Gradiente</h1>
+    <p>O uso do gradiente pode ser feito usando a tag <strong>backgroud-imagem: linear-gradient(to right, white, blue)</strong> na head.<br>
+    to right - esquerda para direita<br>
+    to left - direita para esquerda<br>
+    to top - de baixo para cima<br>
+    to bottom - de cima para baixo<br>
+    radial-gradient: circle - cria um círculo gradiente <br>
+    Podem ser adicionadas outras cores além de duas, quantas forem necessário, além de poder indicar para cada uma delas a porcentagem que vai ocupar na tela. <br>
+    Ao invés das direções to right, to left...., podem ser usados graus(45deg - ângulo de 45 graus).
+    </p>
+    
+    <p>Importante destacar que, talvez para funcionar corretamente na página completa, usar na tag style na head o seletor
+        <pre>
+            * {height: 100%;} 
+            /*Seletor * são configurações globais do CSS*/
+        </pre>
+        E dentro do seletor body:
+        <pre>
+            backgroud-attachment: fixed;
+        </pre>
+    </p>
+
+</body>
+</html>
