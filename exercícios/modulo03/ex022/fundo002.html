@@ -3,9 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <style>
+        p,code,ul{
+            background-color: lightblue;
+            text-align: justify;
+
+        }
+
+        body{
+            background-image: url(imagens/pattern003.png);
+            background-size: 100px 100px;
+            background-repeat: repeat;
+        }
+    </style>
+    <title>Fundo do site</title>
 </head>
 <body>
+    <p>Pela CSS, podem ser definidos parâmetros para a imagem de fundo do site, que vai ser definida no seletor body.</p>
+    <p><pre><code>
+    body{
+        background-image: url(imagens/pattern003.png);/*URL OU CAMINHO DO ARQUIVO*/
+        background-size: 100px 100px; /*TAMANHO A SER MOSTRADO NA TELA*/
+        background-repeat: repeat-x; /*MODO DE REPETIÇÃO*/
+    }
+    </code></pre></p>
+
+    <p>Os valores para background-repeat são:
+        <ul>
+            <li>repeat: padrão, repeta a imagem diversas vezes na tela;</li>
+            <li>no-repeat: mostra a imagem na tela somente uma vez;</li>
+            <li>repeat-x: repete somente no eixo horixontal;</li>
+            <li>repeat-y: repete somente no eixo vertical;</li>
+        </ul>
+    </p>
     
 </body>
 </html>

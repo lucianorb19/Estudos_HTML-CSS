@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        p{
+            text-align: justify;
+            font-family: Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+        }
+        
+        div.bloco{
+            background-image: url('imagens/wallpaper003.jpg');
+            height: 200px;
+            width: 1280px;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        div#q1{
+            background-position:left top;
+        }
+        div#q2{
+            background-position: left center;
+        }
+        div#q3{
+            background-position: right bottom;
+        }
+        div#q4{
+            background-position: center center;
+        }
+    </style>
+
+    
+    <title>Posição da Imagem de Fundo</title>
+</head>
+<body>
+    <p>A posição na imagem dentro do elemento pode ser alterada com o parâmetro <strong>background-position</strong>. Seu valores são <strong>top bottom left right e center</strong>, que podem ser combinados em duplas, sendo o primeiro valor a coluna e a segunda a linha.</p>
+    <div class="bloco" id="q1"></div>
+    <div class="bloco" id="q2"></div>
+    <div class="bloco" id="q3"></div>
+    <div class="bloco" id="q4"></div>
+
+</body>
+</html>
