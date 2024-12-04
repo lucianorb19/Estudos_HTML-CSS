@@ -11,12 +11,13 @@
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
+            background-attachment: fixed;
             font-family: Calibri, 'Trebuchet MS', sans-serif;
         }
 
         main{
             background-color: white;
-            width: 400px;
+            max-width: 400px;
             padding: 10px;
             margin: auto;
             border: 1px solid darkblue;
@@ -35,6 +36,20 @@
     <main>
         <h1>background-size</h1>
         <p>background-size pode assumir valores <strong>auto</strong> (padrão), <strong>contain</strong>, que mostra 100% da imagem na tela sempre e <strong>cover</strong>, que adapta a imagem ao tamanho da tela exibida, sem distorção. </p>
+
+        <h1>background-attachment</h1>
+        <p>O imagem de fundo pode ser vinculada de duas formas, pelo parâmetro <strong>background-attachment</strong>, assumindo valor <strong>scroll</strong>, no qual a imagem rola junto com o texto, ou assumindo valor <strong>fixed</strong>, no qual a imagem é fixa ao fundo, independente do texto.</p>
+
+        <h1>Shorthand para background</h1>
+
+        <p>A ordem é color > image > position > repeat > size > attachment</p>
+        <code>
+        background: black url('imagens/wallpaper002.jpg') center center no-repeat cover fixed;
+        </code>
+        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita mollitia, facilis et necessitatibus earum at quas pariatur laudantium nihil ipsum exercitationem illo facere cum repudiandae ea minus ex! Sed, corporis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sit incidunt atque accusamus, nemo numquam vero commodi laudantium voluptates ipsum debitis possimus quos facere ullam aliquid earum? Earum, architecto deleniti? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit corporis quis a aliquid quo atque aut aperiam nisi laboriosam. Vel quae totam ex similique numquam optio. Aspernatur neque veritatis commodi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque labore, earum tempora ipsum sunt placeat illum optio? Explicabo, sapiente autem quos iusto rerum soluta! Architecto sed a mollitia aliquid voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea at ab accusantium nesciunt facilis excepturi omnis iste eveniet itaque eius similique vero expedita, pariatur perferendis officiis officia quam tenetur rem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis odit, id officiis, labore numquam suscipit fuga ad mollitia, dolore et voluptatem porro in voluptatum? Ex optio quae suscipit neque? Officiis?</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita mollitia, facilis et necessitatibus earum at quas pariatur laudantium nihil ipsum exercitationem illo facere cum repudiandae ea minus ex! Sed, corporis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sit incidunt atque accusamus, nemo numquam vero commodi laudantium voluptates ipsum debitis possimus quos facere ullam aliquid earum? Earum, architecto deleniti? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit corporis quis a aliquid quo atque aut aperiam nisi laboriosam. Vel quae totam ex similique numquam optio. Aspernatur neque veritatis commodi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque labore, earum tempora ipsum sunt placeat illum optio? Explicabo, sapiente autem quos iusto rerum soluta! Architecto sed a mollitia aliquid voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea at ab accusantium nesciunt facilis excepturi omnis iste eveniet itaque eius similique vero expedita, pariatur perferendis officiis officia quam tenetur rem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis odit, id officiis, labore numquam suscipit fuga ad mollitia, dolore et voluptatem porro in voluptatum? Ex optio quae suscipit neque? Officiis?</p>
     </main>
     
 </body>

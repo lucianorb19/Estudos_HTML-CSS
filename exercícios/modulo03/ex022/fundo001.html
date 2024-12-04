@@ -9,12 +9,16 @@
             background-image: url('imagens/wallpaper001.jpg');
         }
         div.quadrado{
-            display: inline-block;
+            /*display: inline-block;*/
             border: 2px solid black;
             border-radius: 5px;
             background-color: grey;
             width: 300px;
             height: 300px;
+        }
+
+        p,code,h1{
+            background-color: white;
         }
 
         div#q1{
@@ -29,20 +33,28 @@
     </style>
 
 
-    <title>Teste de Imagem de Fundo</title>
+    <title>Fundo1</title>
 </head>
 <body>
-    <h1>FUNDO DE ELEMENTOS</h1>
     <p>Exemplo com 3 divs, todas pertencentes a classe quadrado, cada uma com um id diferente.</p>
     <p>Na primeira div, uma cor padrão de fundo. Na segunda, um gradiente, e na terceira, uma imagem, todas configuradas pela id na CSS.</p>
+
+    <h2>background-color</h2>
     <p><pre><code>
         background-color: lightblue;           
-        background-image: linear-gradient(to top, red,yellow);  
-        background-image: url('imagens/pattern003.png');
-        </code></pre></p>
-
+    </code></pre></p>
     <div class="quadrado" id="q1"></div>
+    
+    <h2>background-image: linear-gradient</h2>
+    <p><pre><code>           
+        background-image: linear-gradient(to top, red,yellow);  
+    </code></pre></p>
     <div class="quadrado" id="q2"></div>
+    
+    <h2>background-image: url()</h2>
+    <p><pre><code>  
+        background-image: url('imagens/pattern003.png');
+    </code></pre></p>
     <div class="quadrado" id="q3"></div>
 
     <p>Para o fundo do body, também pode ser definida uma imagem, como está sendo mostrado, tanto usando uma imagem local, quanto uma url externa.</p>
