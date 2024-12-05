@@ -55,7 +55,7 @@ section{ /*efeito paralax*/
     line-height: 2em;
     padding-left: 30px;
     font-family: var(--font3);
-    font-size: 3vw;
+    font-size: 2.5vw;
 }
 
 section.normal{
@@ -64,15 +64,33 @@ section.normal{
 }
 
 section.imagem{
-    background-color: lightslategrey;
+    background-color: rgba(119, 136, 153, 0.216);
     color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473);
+    background-position: right center;
+    background-size: cover;
+    background-attachment: fixed;
     
 }
 
+section > p{
+    padding-bottom: 2em;
+}
+
 section.imagem > p{/*Para parágrafos filhos imediatos de section da classe imagem*/
-    background-color: rgba(0, 0, 0, 0.175);
+    background-color: rgba(0, 0, 0, 0.362);
     display: inline-block; /*width do bloco se adapta ao tamanho da tela*/
     padding: 5px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.537);
+}
+
+section#img01{
+    background-image: url('../imagens/background001.jpg');
+    
+}
+
+section#img02{
+    background-image: url('../imagens/background002.jpg');
 }
 
 
