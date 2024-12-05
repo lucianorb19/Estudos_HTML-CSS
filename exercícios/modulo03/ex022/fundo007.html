@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #container{
+            height: 500px;
+            padding: 10px;
+            background-color: purple;
+            position: relative;
+            height: 96vh;
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;
+
+        }
+
+        #conteudo{
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+            position:absolute;/*PERMITE ALTERAL PARÂMETROS*/
+            left:50%; /*DISTÂCIA ENTRE A BORDA AMARELA ESQUERDA E A MARGEM DO CONTAINER*/
+            top:50%;/*DISTÂNCIA ENTRE A BORA AMARELA TOP E A MARGEM TOP DO CONTAINER*/
+            transform: translate(-50%,-50%);/*MOVE O BLOCO AMARELO EM 50% DE SEU TAMANHO PARA ESQUERDA E PARA CIMA*/
+
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;
+            
+        }
+    </style>
+    
+    
+    <title>Alinhamento Vertical e Horizontal de Elemento</title>
+</head>
+<body>
+    <h1>Alinhamento Vertical e Horizontal de Elemento</h1>
+    <p>Geralmente, para alinhar horizontalmente um elemento do tipo box-lever, usa-se o parâmetro <strong>margin: auto</strong>, mas ele só define o alinhamento horizontal. A centralização vertical e horizontal de um elemento pode ser feita usando os parâmetros, para o container (o elemento que envolve o conteúdo) e para o conteúdo (o elemento dentro do container), da seguinte forma: </p>
+
+    <p>Container</p>
+    <pre><code>
+    position: relative; /**/
+    height: 96vh;
+    </code></pre>
+
+    <p>Conteúdo</p>
+    <pre><code>
+    position: absolute /*PERMITE ALTERAL PARÂMETROS*/
+    left:50%; /*DISTÂCIA ENTRE A BORDA AMARELA ESQUERDA E A MARGEM DO CONTAINER*/
+    top:50%;/*DISTÂNCIA ENTRE A BORA AMARELA TOP E A MARGEM TOP DO CONTAINER*/
+    transform: translate(-50%,-50%);/*MOVE O BLOCO AMARELO EM 50% DE SEU TAMANHO PARA ESQUERDA E PARA CIMA*/
+    </code></pre>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+    
+</body>
+</html>
