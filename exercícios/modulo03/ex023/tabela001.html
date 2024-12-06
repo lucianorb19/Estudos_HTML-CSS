@@ -10,22 +10,24 @@
         }
         table{
             border-collapse: collapse; /*Não criar divisões entre as células*/
-            width: 200px;
+            width: 400px;
+            height: 400px;
         }
 
         td{ /*Personalização para cada célula*/
             border: 1px solid black;
             padding: 5px;
-            text-align: center;
+            text-align: center; /*Alinhamento horizontal*/
+            vertical-align: middle;/*Alinhamento vertical - top middle bottom*/
         }
 
     </style>
 
 
-    <title>Tabelas</title>
+    <title>Tabelas Simples</title>
 </head>
 <body>
-    <h1>Tabelas</h1>
+    <h1>Tabelas Simples</h1>
     <p>A criação de tabelas simples é feita com a tag <strong>table</strong>. E dento dessa tag, são usadas outras tags, seguindo a hierarquia: </p>
     <ul>
         <li>tr - table row - linha</li>
@@ -47,6 +49,8 @@
     }
     </code></pre>
 
+    <h2>Alinhamento Horizontal e Vertical</h2>
+    <p>Alinhamento horizontal com parâmetro <strong>text-align</strong>. Alinhamento vertical com parâmetro <strong>vertical-align</strong>, assumindo valores <strong>top middle e bottom</strong>.</p>
     <table>
         <tr>
             <td>A1</td> <td>B1</td> <td>C1</td>
