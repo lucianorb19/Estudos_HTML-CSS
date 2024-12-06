@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            font-family: Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+        }
+        table{
+            border-collapse: collapse; /*Não criar divisões entre as células*/
+            width: 200px;
+        }
+
+        td{ /*Personalização para cada célula*/
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+
+    </style>
+
+
+    <title>Tabelas</title>
+</head>
+<body>
+    <h1>Tabelas</h1>
+    <p>A criação de tabelas simples é feita com a tag <strong>table</strong>. E dento dessa tag, são usadas outras tags, seguindo a hierarquia: </p>
+    <ul>
+        <li>tr - table row - linha</li>
+        <li>th - table header - cabeçalho</li>
+        <li>td - table data - dado da célula</li>
+    </ul>
+    <p>Dica: Fechamento opcional das tags <strong>tr</strong> e <strong>td</strong>.</p>
+    <p>Dica: Dados fora de ordem ou fora da hieraquia, aparecem antes ou depois da tabela.</p>
+
+    <p>Para criar as bordas típicas de uma tabela, usa-se, na css: </p>
+    <pre><code>
+    table{
+        border-collapse: collapse; /*Não criar divisões entre as células*/
+    }
+
+    td{ /*Personalização para cada célula*/
+        border: 1px solid black;
+        padding: 5px;
+    }
+    </code></pre>
+
+    <table>
+        <tr>
+            <td>A1</td> <td>B1</td> <td>C1</td>
+        </tr>
+        <tr>
+            <td>A2</td> <td>B2</td> <td>C2</td>
+        </tr>
+        <tr>
+            <td>A3</td> <td>B3</td> <td>C3</td>
+        </tr>
+        <tr>
+            <td>A4</td> <td>B4</td> <td>C4</td>
+        </tr>
+    </table>
+    
+</body>
+</html>
