@@ -10,12 +10,28 @@
         }
         table{
             border-collapse: collapse; /*Não criar divisões entre as células*/
-            width: 400px;
+            /*width: 400px;*/
+            position: relative;/*Para permitir o cabeçalho fixo*/
         }
 
+        caption{
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 5px;
+        }
         thead,tfoot{
             background-color: gray;
             color: white;
+        }
+
+        thead > tr > th{/*Para os títulos filhos de tr(linhas) dentro do cabeçalho da tabela*/
+        position:sticky; /*Posição gruda*/
+        top: 0;/*na parte de cima da tela */
+        background-color: gray;/*mesmo do cabeçalho da table*/
+        }
+
+        tbody > tr:nth-child(2n-1){/*Para o corpo da tabela, para cada linha, pulando uma*/
+        background-color:lightgray;
         }
 
         td,th{ /*Personalização para cada célula*/
@@ -26,7 +42,13 @@
         }
 
         td.num{
-            text-align: right;
+            text-align: center;
+            width: 200px;
+        }
+
+        td.estado{
+            width: 400px;
+            text-align: left;
         }
 
         
@@ -41,7 +63,7 @@
     <p>A criação de tabelas simples é feita com a tag <strong>table</strong>. E dento dessa tag, são usadas outras tags, seguindo a hierarquia: </p>
     <ul>
         <li>tr - table row - linha</li>
-        <li>th - table header - cabeçalho</li>
+        <li>th - table header - cabeçalho (usar para títulos da tabela)</li>
         <li>td - table data - dado da célula</li>
     </ul>
     <p>Dica: Fechamento opcional das tags <strong>tr</strong> e <strong>td</strong>.</p>
@@ -58,6 +80,9 @@
         padding: 5px;
     }
     </code></pre>
+
+    <h2>Scope</h2>
+    <p>Para o parâmetro th, usado para títulos de coluna ou linha, quando for título de coluna, o parâmetro <strong>scope</strong> assume valor <strong>col</strong>, quando for de linha, assume valor <strong>row</strong></p>
 
     <h2>Alinhamento Horizontal e Vertical</h2>
     <p>Alinhamento horizontal com parâmetro <strong>text-align</strong>. Alinhamento vertical com parâmetro <strong>vertical-align</strong>, assumindo valores <strong>top middle e bottom</strong>.</p>
@@ -79,6 +104,7 @@
     <h2>Tabelas Grandes</h2>
     <p>Tabela maiores podem ser divididas em:
         <ul>
+            <li>caption - uma pequena frase que resume a tabela</li>
             <li>thead - Table Head - Cabeçalho da tabela</li>
             <li>tbody - Tabel Body - Corpo da tabela</li>
             <li>tfoot - Table Foot - Pé da tabela</li>
@@ -88,7 +114,40 @@
 
     <p>Dica: Usar a estrutura thead, tbody e tfoot para qualquer tabela, não somente as maiores.</p>
 
+    <h2>Efeito Zebrado</h2>
+    <p>Para usar o efeito zebrado na tabela, utilizar a pseudoclasse <strong>nth-child(2n-1)</strong>. Ela seleciona linhas em intervalos (a cada duas, a cada três....). Na CSS, aplicando somente ao body da tabela:</p>
+    <pre><code>
+    tbody > tr:nth-child(2n){/*Para o corpo da tabela, para cada linha, pulando uma*/
+        background-color:lightgray;
+    }
+    </code></pre>
+
+    <p>Também pode ser usado, no lugar do <strong>2n</strong>, o valor <strong>odd</strong>, que delimita as linhas pares, ou <strong>even</strong>, que delimita as ímpares.</p>
+
+
+    <h2>Cabeçalho Fixo</h2>
+    <p>Para manter o cabeçalho fixo na tabela, independente da rolagem para baixo, usam-se duas configurações. No seletor <strong>table</strong>, definir <strong>position: relative;</strong> e criar um outro seletor para o cabeçalho, da seguinte forma: </p>
+    <pre><code>
+    table{
+        position: relative;
+    }
+
+    thead > tr > th{/*Para os títulos filhos de tr(linhas) dentro do cabeçalho da tabela*/
+        position:sticky; /*Posição gruda*/
+        top: 0;/*na parte de cima da tela */
+        background-color: gray;/*mesmo do cabeçalho da table*/
+        }
+    </code></pre>
+
+
+
+
+
+
     <table>
+        <caption>
+            População das Unidades Federativas
+        </caption>
         <thead>
             <tr>
                 <th>Estado</th><th>População</th>
@@ -98,13 +157,46 @@
         
         <tbody>
             <tr>
-                <td>São Paulo</td><td class="num">45 919 049</td>
+                <td class="estado">São Paulo</td><td class="num">45 919 049</td>
             </tr>
             <tr>
-                <td>Minas Gerais</td><td class="num">21 168 791</td>
+                <td class="estado">Minas Gerais</td><td class="num">21 168 791</td>
             </tr>
             <tr>
-                <td>Rio de Janeiro</td><td class="num">17 264 943</td>
+                <td class="estado">Rio de Janeiro</td><td class="num">17 264 943</td>
+            </tr>
+            <tr>
+                <td class="estado">XXXXXXXX</td><td class="num">XXXXXXXXXXX</td>
+            </tr>
+            <tr>
+                <td class="estado">XXXXXXXX</td><td class="num">XXXXXXXXXXX</td>
+            </tr>
+            <tr>
+                <td class="estado">XXXXXXXX</td><td class="num">XXXXXXXXXXX</td>
+            </tr>
+            <tr>
+                <td class="estado">XXXXXXXX</td><td class="num">XXXXXXXXXXX</td>
+            </tr>
+            <tr>
+                <td class="estado">XXXXXXXX</td><td class="num">XXXXXXXXXXX</td>
+            </tr>
+            <tr>
+                <td class="estado">XXXXXXXX</td><td class="num">XXXXXXXXXXX</td>
+            </tr>
+            <tr>
+                <td class="estado">XXXXXXXX</td><td class="num">XXXXXXXXXXX</td>
+            </tr>
+            <tr>
+                <td class="estado">XXXXXXXX</td><td class="num">XXXXXXXXXXX</td>
+            </tr>
+            <tr>
+                <td class="estado">XXXXXXXX</td><td class="num">XXXXXXXXXXX</td>
+            </tr>
+            <tr>
+                <td class="estado">XXXXXXXX</td><td class="num">XXXXXXXXXXX</td>
+            </tr>
+            <tr>
+                <td class="estado">XXXXXXXX</td><td class="num">XXXXXXXXXXX</td>
             </tr>
         </tbody>
 
@@ -118,6 +210,18 @@
         </tfoot>
     </table>
 
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam eligendi culpa enim nisi facilis, mollitia fuga qui, beatae repellat deleniti, necessitatibus porro? Exercitationem ipsa ex ab maxime ullam qui corporis?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quo blanditiis nemo quidem praesentium odit autem. Quia cumque alias cupiditate itaque dolore eligendi repellendus neque cum. Officia quae a error?</p>
     
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam eligendi culpa enim nisi facilis, mollitia fuga qui, beatae repellat deleniti, necessitatibus porro? Exercitationem ipsa ex ab maxime ullam qui corporis?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quo blanditiis nemo quidem praesentium odit autem. Quia cumque alias cupiditate itaque dolore eligendi repellendus neque cum. Officia quae a error?</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam eligendi culpa enim nisi facilis, mollitia fuga qui, beatae repellat deleniti, necessitatibus porro? Exercitationem ipsa ex ab maxime ullam qui corporis?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quo blanditiis nemo quidem praesentium odit autem. Quia cumque alias cupiditate itaque dolore eligendi repellendus neque cum. Officia quae a error?</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam eligendi culpa enim nisi facilis, mollitia fuga qui, beatae repellat deleniti, necessitatibus porro? Exercitationem ipsa ex ab maxime ullam qui corporis?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quo blanditiis nemo quidem praesentium odit autem. Quia cumque alias cupiditate itaque dolore eligendi repellendus neque cum. Officia quae a error?</p>
 </body>
 </html>
