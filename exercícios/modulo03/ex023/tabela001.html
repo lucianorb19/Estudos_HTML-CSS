@@ -82,7 +82,49 @@
     </code></pre>
 
     <h2>Scope</h2>
-    <p>Para o parâmetro th, usado para títulos de coluna ou linha, quando for título de coluna, o parâmetro <strong>scope</strong> assume valor <strong>col</strong>, quando for de linha, assume valor <strong>row</strong></p>
+    <p>Para o parâmetro th, usado para títulos de coluna ou linha, quando for título de uma coluna, o parâmetro <strong>scope</strong> assume valor <strong>col</strong>, quando for título de uma linha, assume valor <strong>row</strong>. Isso ajuda os mecanismos de busca a valorizar o site.</p>
+    
+    <p>No exemplo abaixo, <strong>Nomes</strong> é um título (th) com escopo <strong>col</strong></p>
+    <table>
+        <tbody>
+            <tr>
+                <th>Nomes</th>
+            </tr>
+            <tr>
+                <td>Luciano</td>
+            </tr>
+            <tr>
+                <td>Abreu</td>
+            </tr>
+            <tr>
+                <td>Daniel</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Nesse exemplo, o título <strong>Total</strong> tem escolpo <strong>row</strong></p>
+    <table>
+        <tbody>
+            <tr>
+                <th>Nome</th>
+                <th>Valor (R$)</th>
+            </tr>
+            <tr>
+                <td>Banana</td>
+                <td>15.10</td>
+            </tr>
+            <tr>
+                <td>Maçã</td>
+                <td>12.50</td>
+            </tr>
+            <tr>
+                <th>Total</th>
+                <td>27.60</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Quando o título estiver mesclado e se referir a um conjunto de linhas ou colunas, ele vai ser <strong>colgroup</strong> ou <strong>rowgroup</strong></p>
 
     <h2>Alinhamento Horizontal e Vertical</h2>
     <p>Alinhamento horizontal com parâmetro <strong>text-align</strong>. Alinhamento vertical com parâmetro <strong>vertical-align</strong>, assumindo valores <strong>top middle e bottom</strong>.</p>
@@ -216,6 +258,7 @@
     <p>Por exemplo, para que a célula B ocupe o espalo de duas células, e para que a célula D ocupe três linhas</p>
     <pre><code>
     colspan="2"
+    rowspan="3"
     </code></pre>
 
     <table width="300px">
