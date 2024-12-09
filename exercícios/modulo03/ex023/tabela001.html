@@ -8,9 +8,10 @@
             font-family: Calibri, 'Trebuchet MS', sans-serif;
             font-size: 18px;
         }
+    
         table{
             border-collapse: collapse; /*Não criar divisões entre as células*/
-            /*width: 400px;*/
+            width: 900px;
             position: relative;/*Para permitir o cabeçalho fixo*/
         }
 
@@ -30,9 +31,9 @@
         background-color: gray;/*mesmo do cabeçalho da table*/
         }
 
-        tbody > tr:nth-child(2n-1){/*Para o corpo da tabela, para cada linha, pulando uma*/
+        /*tbody > tr:nth-child(2n-1){/*Para o corpo da tabela, para cada linha, pulando uma
         background-color:lightgray;
-        }
+        }*/
 
         td,th{ /*Personalização para cada célula*/
             border: 1px solid black;
@@ -49,6 +50,14 @@
         td.estado{
             width: 400px;
             text-align: left;
+        }
+
+        col.col_nome{
+            background-color:green;
+        }
+
+        div#grandona{
+            overflow: auto;
         }
 
         
@@ -288,18 +297,165 @@
         <tfoot></tfoot>
     </table>
 
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam eligendi culpa enim nisi facilis, mollitia fuga qui, beatae repellat deleniti, necessitatibus porro? Exercitationem ipsa ex ab maxime ullam qui corporis?</p>
+    <h2>Operações em Colunas</h2>
+    <p>Para realizar alguma mudança nas linhas, é necessário somente usar a tag tr. Para colunas, como não há uma tag específica na criação da tabela, o HTML5 trouxe uma nova tag, colgroup, e dentro dessa tag, é possível criar elementos col com classes, sendo cada um uma coluna da tabela, sendo o primeiro col a coluna mais a esquerda, e assim por diante. Por exemplo, a tabela:</p>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quo blanditiis nemo quidem praesentium odit autem. Quia cumque alias cupiditate itaque dolore eligendi repellendus neque cum. Officia quae a error?</p>
+    <table>
+        <tbody>
+            <tr>
+                <th>Nome</th>
+                <th>Sexo</th>
+                <th>Idade</th>
+            </tr>
+            <tr>
+                <td>Luciano</td>
+                <td>M</td>
+                <td>27</td>
+            </tr>
+            <tr>
+                <td>Gustavo</td>
+                <td>M</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td>Lucas</td>
+                <td>M</td>
+                <td>28</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Usando a tag colgroup:</p>
+    <pre><code>
+    colgroup 
+        col class="col_nome";
+        col class="col_sexo";
+        col class="col_idade"
+    </code></pre>
+
+    E na CSS, configurar algo específico para cada class da col 
+    <pre><code>
+    col.col_nome{
+        background-color: gray;
+    }
+    </code></pre>
+
+    <table>
+        <colgroup>
+            <col class="col_nome">
+            <col class="col_sexo">
+            <col class="col_idade">
+        </colgroup>
+        <tbody>
+            <tr>
+                <th>Nome</th>
+                <th>Sexo</th>
+                <th>Idade</th>
+            </tr>
+            <tr>
+                <td>Luciano</td>
+                <td>M</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>Gustavo</td>
+                <td>M</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td>Lucas</td>
+                <td>M</td>
+                <td>28</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Tambem pode ser usado o parâmetro span dentro da tag col, para que a configuração da coluna se expanda para X colunas a direita dela.</p>
+    <pre><code>
+    col class="col_nome" span="2"
+    </code></pre>
     
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam eligendi culpa enim nisi facilis, mollitia fuga qui, beatae repellat deleniti, necessitatibus porro? Exercitationem ipsa ex ab maxime ullam qui corporis?</p>
+    <p>Isso significa que contando a coluna col_nome, duas colunas terão a configuração dessa classe.</p>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quo blanditiis nemo quidem praesentium odit autem. Quia cumque alias cupiditate itaque dolore eligendi repellendus neque cum. Officia quae a error?</p>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam eligendi culpa enim nisi facilis, mollitia fuga qui, beatae repellat deleniti, necessitatibus porro? Exercitationem ipsa ex ab maxime ullam qui corporis?</p>
+    <h2>Responsividade com Tabelas</h2>
+    <p>Para criar tabelas que sejam estéticas e responsivas, uma opção é <strong>envelopar toda a tag table com uma div de id qualquer, e nesse id, usar os parâmetros overflow</strong>.</p>
+    <ul>
+        <li>Overflow: responsividade em todos os eixos</li>
+        <li>Overflow-x: responsividade no eixo x </li>
+        <li>Overfow-y: responsividade no eixo y</li>
+    </ul>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quo blanditiis nemo quidem praesentium odit autem. Quia cumque alias cupiditate itaque dolore eligendi repellendus neque cum. Officia quae a error?</p>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam eligendi culpa enim nisi facilis, mollitia fuga qui, beatae repellat deleniti, necessitatibus porro? Exercitationem ipsa ex ab maxime ullam qui corporis?</p>
+    <p>Os valores para o parâmetro overflow podem ser <strong>auto, hidden e scroll</strong>. Assumindo valor auto, o navegador cria uma barra de rolagem somente para a tabela. Ainda pode ser usado o parâmetro width assumindo valor 50vw, ou seja a tabela, com a barra de rolagem, vai sempre ocupar 50% da largura da tela.</p>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quo blanditiis nemo quidem praesentium odit autem. Quia cumque alias cupiditate itaque dolore eligendi repellendus neque cum. Officia quae a error?</p>
+    <div id="grandona">
+        <table>
+            <thead>
+                <tr>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>C</th>
+                    <th>D</th>
+                    <th>E</th>
+                    <th>F</th>
+                    <th>G</th>
+                    <th>H</th>
+                    <th>I</th>
+                    <th>J</th>
+                    <th>K</th>
+                    <th>L</th>
+                    <th>M</th>
+                    <th>N</th>
+                    <th>O</th>
+                    <th>P</th>
+                    <th>Q</th>
+                    <th>R</th>
+                    <th>S</th>
+                    <th>T</th>
+                    <th>U</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eum sunt est et omnis culpa dignissimos veniam, architecto vero quo mollitia numquam excepturi quasi a? Natus ipsam omnis culpa autem?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eum sunt est et omnis culpa dignissimos veniam, architecto vero quo mollitia numquam excepturi quasi a? Natus ipsam omnis culpa autem?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eum sunt est et omnis culpa dignissimos veniam, architecto vero quo mollitia numquam excepturi quasi a? Natus ipsam omnis culpa autem?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eum sunt est et omnis culpa dignissimos veniam, architecto vero quo mollitia numquam excepturi quasi a? Natus ipsam omnis culpa autem?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eum sunt est et omnis culpa dignissimos veniam, architecto vero quo mollitia numquam excepturi quasi a? Natus ipsam omnis culpa autem?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eum sunt est et omnis culpa dignissimos veniam, architecto vero quo mollitia numquam excepturi quasi a? Natus ipsam omnis culpa autem?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eum sunt est et omnis culpa dignissimos veniam, architecto vero quo mollitia numquam excepturi quasi a? Natus ipsam omnis culpa autem?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eum sunt est et omnis culpa dignissimos veniam, architecto vero quo mollitia numquam excepturi quasi a? Natus ipsam omnis culpa autem?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eum sunt est et omnis culpa dignissimos veniam, architecto vero quo mollitia numquam excepturi quasi a? Natus ipsam omnis culpa autem?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eum sunt est et omnis culpa dignissimos veniam, architecto vero quo mollitia numquam excepturi quasi a? Natus ipsam omnis culpa autem?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eum sunt est et omnis culpa dignissimos veniam, architecto vero quo mollitia numquam excepturi quasi a? Natus ipsam omnis culpa autem?</p>
+
+    
 </body>
 </html>
