@@ -8,6 +8,11 @@
             font-family: Calibri, 'Trebuchet MS', sans-serif;
             font-size: 1.1em;
         }
+
+        iframe{
+            width: 400px;
+            height: 400px;
+        }
     </style>
 
 
@@ -15,14 +20,21 @@
 </head>
 <body>
     <h1>Iframe</h1>
-    <p>Iframe são quadros em nível de linha. Eles servem para representar no quadro um site,.....</p>
-    <p>No exemplo abaixo, o site do curso em vídeo está dentro de um iframe. Alguns sites tem proteção para que não sejam exibidos em iframe.</p>
+    <p>Iframe são quadros em nível de linha. Eles servem para representar no quadro um site,..... Por padrão, seu tamanho 150px x 300px. No caso do iframe, a configuração de estilo inline não tem prioridade sobre a configuração de estilo local, ou seja, o que estiver na tag style local vai prevalecer.</p>
+    <p>No exemplo abaixo, o site do curso em vídeo está dentro de um iframe. </p>
     
     <pre><code>
     iframe src="https://www.cursoemvideo.com" frameborder="0" /iframe
     </code></pre>
-
     <iframe src="https://www.cursoemvideo.com" frameborder="0"></iframe>
+    
+
+    <p>Alguns sites tem proteção para que não sejam exibidos em iframe. <del>Caso isso ocorra, o que estiver escrito dentro da tag vai aparecer no lugar do iframe, logo, é sempre recomendável colocar o link do site, caso o próprio iframe dele não funcione.</del></p>
+    <iframe src="https://www.google.com.br/?hl=pt-BR" frameborder="0">
+    texto
+    </iframe>
+
+    <p>O parâmetro <mark>scolling</mark> configura a barra de rolagem do iframe. Com valor auto, a barra aparece automaticamente, com valor yes, aparece de qualquer forma, e com no, não aparece. O comportamento varia, de acordo com o navegador.</p>
     
     
 </body>
