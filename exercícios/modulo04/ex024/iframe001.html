@@ -20,7 +20,7 @@
 </head>
 <body>
     <h1>Iframe</h1>
-    <p>Iframe são quadros em nível de linha. Eles servem para representar no quadro um site, outas páginas html locais. Por padrão, seu tamanho 150px x 300px. No caso do iframe, a configuração de estilo inline não tem prioridade sobre a configuração de estilo local, ou seja, o que estiver na tag style local vai prevalecer.</p>
+    <p>Iframe são quadros em nível de linha. Eles servem para representar no quadro um site e outas páginas html locais. Por padrão, seu tamanho 150px x 300px. No caso do iframe, a configuração de estilo inline não tem prioridade sobre a configuração de estilo local, ou seja, o que estiver na tag style local vai prevalecer.</p>
     <p>No exemplo abaixo, o site do curso em vídeo está dentro de um iframe. </p>
     
     <pre><code>
@@ -75,6 +75,22 @@
     <iframe srcdoc="<h1>Aguardando clicar no link</h1>
                     <img src='imagens/foto-m.png' alt='Foto'></img>" 
     name="frameB" width="500" height="500"></iframe>
+
+    <h2>Segurança nos Iframes</h2>
+    <p>Como os iframes são tags que possibilitam abrir sites de terceiros no seu site, ele pode abrir portas para vulnerabilidades que esses sites de terceiros possam causar. Pra que isso seja mitigado, podemos usar o <mark>parâmetro sandbox=sandbox no iframe</mark>. Assumindo esse valor, o iframe só mostra na tela o site do terceiro, mas impede que qualquer informação seja enviada ao site. Junto com ele, pode ser usado o parâmetro <mark>referrerpolicy="no-referrer"</mark>, que também impede que informações do usuário sejam utilizadas.</p>
+
+    <h3>Sem segurança</h3>
+    <iframe src="paginas/pagina02.html"></iframe>
+
+    <h3>Com segurança "máxima" (não envia nenhuma informação)</h3>
+    <iframe src="paginas/pagina02.html" sandbox="sandbox"></iframe>
+
+    <p>Configurações limitadas de segurança também podem ser definidas, como um meio termo, com os seguintes parâmetros:</p>
+    <ul>
+        <li><mark>allow-same-origin</mark>: permite a execução de conteúdos das mesma origem</li>
+        <li><mark>allow-forms</mark>: permite a execução de formulários</li>
+        <li><mark>allow-scripts</mark>: permite scripts</li>
+    </ul>
 
     
     
