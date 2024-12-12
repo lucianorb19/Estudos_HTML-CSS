@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+*{ /*PARA TODOS ELEMENTOS, MARGEM E PADDING ZERADOS*/
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html,body{
+    height: 100vh;/*100% da tela visível*/
+    width: 100vh;/*100% da tela visível*/
+    /*background-color: black;*/
+}
+
+body{
+    background: url('../imagens/fundo-madeira.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+main{
+    position: relative; /*permite criar dentro deles itens com position absolute (que podem ser posicionados livremente)*/
+    height: 100vh;/*100% da tela visível*/
+    width: 100vw;
+}
+
+section#telefone{
+    position: absolute;/*permite posicionar livremente*/
+    /*Centralização no main*/
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    /*Tamano da section mesmo da imagem*/
+    height: 627px;
+    width: 311px;
+    /*Fundo da section é a imagem*/
+    background: url('../imagens/frame-iphone.png');
+    background-repeat: no-repeat;
+}
+
+iframe#tela{/*Para o iframe de id tela*/
+    position: relative;/*Permite definir o posicionamento na tela pelo top e left*/
+    /*Posicionamento na tela pela top e esquerda*/
+    top:80px;
+    left:22px;
+    /*Tamanho altura e arredondamento da borda*/
+    width: 268px;
+    height: 472px;
+    border-radius: 3px;
+}
+
+section#redes-sociais{
+    text-align: right;
+}
+section#redes-sociais img {/*Para toda tag img dentro da section de id redes sociais*/
+    width: 50px;
+    margin:10px;
+    border-radius: 50%; /*Torna a imagem redonda*/
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.361);
+    box-sizing: border-box;/*Torda a borda parte da caixa - (pra que o ícone não mexa na animação do hover)*/
+}
+
+/*
+Pseudoclasse para as tag img da tag section de id redes-sociais
+Executa uma ação específica ao passar o mouse sobre a img
+*/
+section#redes-sociais img:hover{
+    border: 2px solid white;/*Torna as bordas brancas ao passar o mouse*/
+    transform: translate(-3px, -3px);/*Move o ícone 3px para esquerda e pra cima*/
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.366);/*Expande a sombra*/
+    transition: transform 0.3s, border 0.3s/*O transforme e o efeito borda demoram 0.3 segundos - suavidade*/
+}
