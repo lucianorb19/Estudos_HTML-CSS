@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            font-size: 1.2em;
+        }
+
+        body{
+            font-family: Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+    
+    
+    <title>Formulários</title>
+</head>
+<body>
+    <h1>Formulários</h1>
+
+    <p>Formulários são meios de obter informações do usuário. Usa-se a tag <mark>form</mark>. De maneira simples, temos um formulário inicial</p>
+    <ul>
+        <li>input: entrada do usuário</li>
+        <li>input type text: entra de texto do usuário</li>
+        <li>input type submit: botão para enviar as informações dos inputs</li>
+        <li>name: útil para identificar o campo no HTML e PHP</li>
+        <li>id: útil para identificar o campo no JavaScript</li>
+    </ul>
+
+    <pre><code>
+    form
+    p Nome: input type="text" name="nome" id="inome"
+    p Sobrenome input type="text" name="sobrenome" id="isobrenome"
+    p input type="submit" value="Enviar"
+    </code></pre>
+
+    <form>
+    <p>Nome: <input type="text" name="nome" id="inome"></p>
+    <p>Sobrenome: <input type="text" name="sobrenome" id="isobrenome"></p>
+    <p><input type="submit" value="Enviar"></p>
+    </form>
+
+    <p>No formulário acima, não há uma relação entre o Nome e seu campo para preenchimento, assim como não há para Sobrenome. Isso se resolve usando a tag <mark>label</mark> para envelopar Nome / Sobrenome e no parâmetro <mark>for</mark> usar o valor que estiver em <mark>id da tag input</mark></p>
+
+    <pre><code>
+        form
+        p label for="inome" Nome: 
+        input type="text" name="nome" id="inome"
+        p label for isobrenome Sobrenome 
+        input type="text" name="sobrenome" id="isobrenome"
+        p input type="submit" value="Enviar"
+        </code></pre>
+
+    <form action="">
+        <p><label for="inome">Nome:</label>
+            <input type="text" name="nome" id="inome">
+        </p>
+        <p><label for="isobrenome">Sobrenome:</label>
+            <input type="text" name="sobrenome" id="isobrenome">
+        </p>
+    </form>
+
+    <h2>Métodos get e post</h2>
+    <p>O parâmetro <mark>method</mark> da tag form assume dois valores, <mark>get e post</mark>, que são os métodos de envio da informação dos formulários para a página que vai utilizá-los. O <mark>get</mark> mostra os valores <mark>na url</mark>, o <mark>post não</mark>, porém, nenhum dos dois é seguro. Recomenda-se usar o get para infoções não sensíveis e o post para informações mais sigilosas. Além disso, o get é limitado a 3mil bytes, não deve ser usado para dados sensíveis e nem para envio de arquivos.</p>
+
+    <h2>Alguns parâmetros úteis do form</h2>
+    <ul>
+        <li>autocomplete: define se vão ou não aparecer sugestões para os campos (preenchimentos anteriores)</li>
+        <li>action: o arquivo da linguagem que vai receber os dados. Por exemplo manda para cadastro.php</li>
+        <li>method: métodos de envio get e post
+            <ul>
+                <li>get: padrão - mostra os dados na url</li>
+                <li>post: não mostra os dados na url</li>
+            </ul>
+        </li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+   
+</body>
+</html>
