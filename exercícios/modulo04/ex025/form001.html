@@ -62,8 +62,6 @@
     <h2>Métodos get e post</h2>
     <p>O parâmetro <mark>method</mark> da tag form assume dois valores, <mark>get e post</mark>, que são os métodos de envio da informação dos formulários para a página que vai utilizá-los. O <mark>get</mark> mostra os valores <mark>na url</mark>, o <mark>post não</mark>, porém, nenhum dos dois é seguro. Recomenda-se usar o get para infoções não sensíveis e o post para informações mais sigilosas. Além disso, o get é limitado a 3mil bytes, não deve ser usado para dados sensíveis e nem para envio de arquivos.</p>
 
-    <h2>Formulário com campo senha</h2>
-    <p>Usando campo <mark>input type="password"</mark></p>
 
     <form action="cadastro.php" method="post">
         <p>
@@ -121,6 +119,19 @@
             </fieldset>
         </p>
         </p>
+        <p>
+            <label for="icor">Cor</label>
+            <input type="color" name="cor" id="icor" value="#0000ff">
+        </p>
+        <p>
+            <label for="isatisfacao">Nível de Satisfação</label>
+            <input type="range" name="satisfacao" id="isatisfacao" min="1" max="10" value="1">
+        </p>
+        <p>
+            <label for="ifoto_perfil">Foto de perfil</label>
+            <input type="file" name="foto_perfil" id="ifoto_perfil">
+
+        </p>
         <p><input type="submit" value="Enviar">  
         <input type="reset" value="Limpar">
         </p>
@@ -156,6 +167,9 @@
         <li>input type tel: telefone celular</li>
         <li>input type checkbox: campo para marcar/desmarcar. Aceita múltiplas marcações.</li>
         <li>input type radio: campo para marcar/desmarcar. Aceita várias marcações. Caso seja preciso delimitar uma escolha somente, usar o mesmo valor nos inputs para o parâmetro <strong>name</strong>.</li>
+        <li>input type color: O usuário escolhe uma cor. Pode ser definida uma inicial no parâmetro <strong>value</strong>, assumindo valor <strong>headecimal</strong>.</li>
+        <li>input type range: escolha numa escala. Podem ser definidos <strong>min</strong>, <strong>max</strong> e valor inicial com <strong>value</strong></li>
+        <li>input type file: permite o envio de arquivos. Não sar com método get.</li>
         <li>input type submit: botão para enviar as informações dos inputs</li>
         <li>input type reset: botão que limpa os campos</li>
         <li>name: útil para identificar o campo no HTML e PHP</li>
@@ -171,6 +185,7 @@
         <li>autocomplete: dentro do input, define se o campo é um nome de usuário, senha nova, senha atual, dentre outras....</li>
         <li>Tag fieldset: agrupa os campos dentro dela. Parâmetro legend dá o seu nome.</li>
         <li>checked: deixa marcado o campo radio/checkbox</li>
+
 
     </ul>
 
