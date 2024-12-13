@@ -20,13 +20,6 @@
     <h1>Formulários</h1>
 
     <p>Formulários são meios de obter informações do usuário. Usa-se a tag <mark>form</mark>. De maneira simples, temos um formulário inicial</p>
-    <ul>
-        <li>input: entrada do usuário</li>
-        <li>input type text: entra de texto do usuário</li>
-        <li>input type submit: botão para enviar as informações dos inputs</li>
-        <li>name: útil para identificar o campo no HTML e PHP</li>
-        <li>id: útil para identificar o campo no JavaScript</li>
-    </ul>
 
     <pre><code>
     form
@@ -53,16 +46,33 @@
         </code></pre>
 
     <form action="">
-        <p><label for="inome">Nome:</label>
-            <input type="text" name="nome" id="inome">
+        <p><label for="inome2">Nome:</label>
+            <input type="text" name="nome" id="inome2">
         </p>
-        <p><label for="isobrenome">Sobrenome:</label>
-            <input type="text" name="sobrenome" id="isobrenome">
+        <p><label for="isobrenome2">Sobrenome:</label>
+            <input type="text" name="sobrenome" id="isobrenome2">
         </p>
+        <p><input type="submit" value="Enviar"></p>
     </form>
 
     <h2>Métodos get e post</h2>
     <p>O parâmetro <mark>method</mark> da tag form assume dois valores, <mark>get e post</mark>, que são os métodos de envio da informação dos formulários para a página que vai utilizá-los. O <mark>get</mark> mostra os valores <mark>na url</mark>, o <mark>post não</mark>, porém, nenhum dos dois é seguro. Recomenda-se usar o get para infoções não sensíveis e o post para informações mais sigilosas. Além disso, o get é limitado a 3mil bytes, não deve ser usado para dados sensíveis e nem para envio de arquivos.</p>
+
+    <h2>Formulário com campo senha</h2>
+    <p>Usando campo <mark>input type="password"</mark></p>
+
+    <form action="cadastro.php" method="post">
+        <p>
+            <label for="iusuario">Usuário</label>
+            <input type="text" name="usuario" id="iusuario">
+        </p>
+        <p>
+            <label for="isenha">Senha</label>
+            <input type="password" name="senha" id="isenha">
+        </p>
+        <p><input type="submit" value="Enviar">  <input type="reset" value="Limpar"></p>
+        
+    </form>
 
     <h2>Alguns parâmetros úteis do form</h2>
     <ul>
@@ -77,6 +87,24 @@
         <li></li>
         <li></li>
         <li></li>
+    </ul>
+
+    <h2>Campos úteis do form</h2>
+    <ul>
+        <li>input: entrada do usuário</li>
+        <li>input type text: entra de texto do usuário</li>
+        <li>input type password: campo para senha</li>
+        <li>input type submit: botão para enviar as informações dos inputs</li>
+        <li>input type reset: botão que limpa os campos</li>
+        <li>name: útil para identificar o campo no HTML e PHP</li>
+        <li>id: útil para identificar o campo no JavaScript</li>
+        <li>required: não assume nenhuma valor. Se inserido no input, não vai enviar os dados caso o campo esteja vazio.</li>
+        <li>minlength: define o tamanho mínimo de caractéres para o campo</li>
+        <li>maxlength: define o tamanho máximo de caractéres para o campo</li>
+        <li>size: define o tamanho da caixa para mostrar x caractéres</li>
+        <li>placeholder: uma mensagem que vai aparecer dentro do campo antes do preenchimento</li>
+        <li>autocomplete: dentro do input, define se o campo é um nome de usuário, senha nova, senha atual, dentre outras....</li>
+        
     </ul>
 
    
