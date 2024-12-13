@@ -11,6 +11,10 @@
         body{
             font-family: Calibri, 'Trebuchet MS', sans-serif;
         }
+
+        ul{
+            line-height: 28px;
+        }
     </style>
     
     
@@ -74,13 +78,48 @@
             <label for="imedia">Média</label>
             <input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" step="0.1" required size="4">
         </p>
+        <fieldset>
+            <legend>Dados Nascimento</legend>
+            <p>
+                <label for="inascimento">Nascimento</label>
+                <input type="date" name="nascimento" id="inascimento" required autocomplete="bday">
+            </p>
+            <p>
+                <label for="ihora_nascimento">Horário Nascimento</label>
+                <input type="time" name="hora_nascimento" id="ihora_nascimento" required>
+            </p>
+        </fieldset>
         <p>
-            <label for="inascimento">Nascimento</label>
-            <input type="date" name="nascimento" id="inascimento" required autocomplete="bday">
+            <label for="itelefone">Telefone (estudar validação com expressões regulares e pattern)</label>
+            <input type="tel" name="telefone" id="itelefone" required autocomplete="tel" placeholder="(xx) 9 xxxx-xxxx">
         </p>
         <p>
-            <label for="ihora_nascimento">Horário Nascimento</label>
-            <input type="time" name="hora_nascimento" id="ihora_nascimento" required>
+            <label for="iemail">E-mail (estudar validação com expressões regulares e pattern)</label>
+            <input type="email" name="email" id="iemail">
+        </p>
+        <p>
+            <fieldset>
+                <legend>Esportes Favoritos</legend>
+
+                <input type="checkbox" name="futebol" id="ifutebol">
+                <label for="ifutebol">Futebol</label> <br>
+
+                <input type="checkbox" name="basquete" id="ibasquete">
+                <label for="ibasquete">Basquete</label> <br>
+
+                <input type="checkbox" name="volei" id="ivolei">
+                <label for="ivolei">Vôlei</label>
+            </fieldset>
+        <p>
+            <fieldset>
+                <legend>Sexo</legend>
+                <input type="radio" name="sexo" id="isexom" value="M">
+                <label for="isexom">Masculino</label> <br>
+
+                <input type="radio" name="sexo" id="isexof" value="F">
+                <label for="isexof">Feminino</label>
+            </fieldset>
+        </p>
         </p>
         <p><input type="submit" value="Enviar">  
         <input type="reset" value="Limpar">
@@ -110,9 +149,13 @@
         <li>input type password: campo para senha</li>
         <li>input type number: aceita números e -</li>
         <li>step: para campos input number, define a progressão da parte decimal</li>
-        <li>input type month: um mês e ano</li>
-        <li>input type date: dia/mês/ano</li>
-        <li>input type time: hora/minuto</li>
+        <li>input type month: um mês e ano (incompatível com mozilla, safari)</li>
+        <li>input type date: dia/mês/ano (incompatível com safari)</li>
+        <li>input type time: hora/minuto (incompatível com safari)</li>
+        <li>input type email: email (verifica se tem @)</li>
+        <li>input type tel: telefone celular</li>
+        <li>input type checkbox: campo para marcar/desmarcar. Aceita múltiplas marcações.</li>
+        <li>input type radio: campo para marcar/desmarcar. Aceita várias marcações. Caso seja preciso delimitar uma escolha somente, usar o mesmo valor nos inputs para o parâmetro <strong>name</strong>.</li>
         <li>input type submit: botão para enviar as informações dos inputs</li>
         <li>input type reset: botão que limpa os campos</li>
         <li>name: útil para identificar o campo no HTML e PHP</li>
@@ -126,6 +169,8 @@
         <li>placeholder: uma mensagem que vai aparecer dentro do campo antes do preenchimento</li>
         <li>value: um valor inicial para o campo. Caso seja definido, sobrepõe o placeholder</li>
         <li>autocomplete: dentro do input, define se o campo é um nome de usuário, senha nova, senha atual, dentre outras....</li>
+        <li>Tag fieldset: agrupa os campos dentro dela. Parâmetro legend dá o seu nome.</li>
+        <li>checked: deixa marcado o campo radio/checkbox</li>
 
     </ul>
 
