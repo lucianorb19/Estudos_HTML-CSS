@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+/*Estilos para telas*/
+
+*{
+    margin: 2px;
+    padding: 2px;
+}
+
+html{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    text-align: justify;
+}
+
+header{
+    background-color: lightgray;
+}
+
+header h1{
+    text-align: center;
+}
+
+menu ul{
+    list-style-type: none;/*Retira as bolinhas da lista*/
+}
+
+menu li{
+    background-color: darkgray;
+    border-radius: 5px;
+    display: inline-block; /*Um ao lado do outro*/
+    padding: 10px;
+}
+
+main{
+    min-height: 95vh; /*Main grande para que o footer fique bem abaixo na tela*/
+}
+
+article{
+    width: 600px;
+    /*Display block e margin auto para centralizar automaticamente*/
+    display: block;
+    margin: auto;
+}
+
+footer,footer a{
+    text-align: center;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
