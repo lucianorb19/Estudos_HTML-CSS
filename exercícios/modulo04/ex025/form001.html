@@ -68,14 +68,20 @@
             <label for="iusuario">Usuário</label>
             <input type="text" name="usuario" id="iusuario" required maxlength="30" size="20" autocomplete="username">
         </p>
+        
+        
         <p>
             <label for="isenha">Senha</label>
             <input type="password" name="senha" id="isenha" required minlength="8" maxlength="30" size="20" placeholder="mínimo 8 caractéres" autocomplete="current-password">
         </p>
+        
+        
         <p>
             <label for="imedia">Média</label>
             <input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" step="0.1" required size="4">
         </p>
+        
+        
         <fieldset>
             <legend>Dados Nascimento</legend>
             <p>
@@ -87,14 +93,20 @@
                 <input type="time" name="hora_nascimento" id="ihora_nascimento" required>
             </p>
         </fieldset>
+        
+        
         <p>
             <label for="itelefone">Telefone (estudar validação com expressões regulares e pattern)</label>
             <input type="tel" name="telefone" id="itelefone" required autocomplete="tel" placeholder="(xx) 9 xxxx-xxxx">
         </p>
+        
+        
         <p>
             <label for="iemail">E-mail (estudar validação com expressões regulares e pattern)</label>
             <input type="email" name="email" id="iemail">
         </p>
+        
+        
         <p>
             <fieldset>
                 <legend>Esportes Favoritos</legend>
@@ -108,6 +120,9 @@
                 <input type="checkbox" name="volei" id="ivolei">
                 <label for="ivolei">Vôlei</label>
             </fieldset>
+        </p>
+        
+        
         <p>
             <fieldset>
                 <legend>Sexo</legend>
@@ -117,21 +132,35 @@
                 <input type="radio" name="sexo" id="isexof" value="F">
                 <label for="isexof">Feminino</label>
             </fieldset>
+        
         </p>
-        </p>
+        
+        
         <p>
             <label for="icor">Cor</label>
             <input type="color" name="cor" id="icor" value="#0000ff">
         </p>
+        
+        
         <p>
             <label for="isatisfacao">Nível de Satisfação</label>
-            <input type="range" name="satisfacao" id="isatisfacao" min="1" max="10" value="1">
+            <input type="range" name="satisfacao" id="isatisfacao" min="1" max="10" value="1"
+            oninput="id_range.innerHTML = Number(isatisfacao.value)">
+            <!--
+            id_range.innerHTML - O que vai ser definido para o valor do campo de id id_range
+            Number(isatifacao.value) - o valor numérico assumido pelo campo de id isatifacao
+            -->
+            <output id="id_range"></output>
         </p>
+        
+        
         <p>
             <label for="ifoto_perfil">Foto de perfil</label>
             <input type="file" name="foto_perfil" id="ifoto_perfil">
 
         </p>
+        
+        
         <p>
             <label for="iestado">Estado</label>
             <select name="estado" id="iestado">
@@ -148,6 +177,8 @@
                 </optgroup>
             </select>
         </p>
+        
+        
         <p>
             <label for="iprofissao">Profissão</label>
             <input type="text" name="profissao" id="iprofissao" list="lista_profissao">
@@ -157,15 +188,61 @@
                 <option>Programador</option>
             </datalist>
         </p>
+        
+        
         <p>
             <label for="imensagem">Mensagem</label> <br>
             <textarea name="mensagem" id="imensagem" cols="30" rows="5" placeholder="Sua mensagem aqui"></textarea>
         </p>
+        
+        
+        <p>
+            <label for="inumero1">Número 1: </label>
+            <input type="number" name="numero1" id="inumero1" min="1" max="50" placeholder="1 a 50" required oninput="isoma.innerHTML = Number(inumero1.value) + Number(inumero2.value)">
+            <!--
+            isoma.innerHTML = - o que vai ser definido para o valor do campo de id isoma
+            Number(inumero1.value) + Number(inumero2.value) - a soma de dois valores - campos de id inumero1 e inumero2
+            -->
+            <br>
+
+            <label for="inumero2">Número 2: </label>
+            <input type="number" name="numero2" id="inumero2" min="1" max="50" placeholder="1 a 50" required oninput="isoma.innerHTML = Number(inumero1.value) + Number(inumero2.value)">
+            <br>
+            <!--
+            isoma.innerHTML = - o que vai ser definido para o valor do campo de id isoma
+            Number(inumero1.value) + Number(inumero2.value) - a soma de dois valores - campos de id inumero1 e inumero2
+            -->
+            
+            <label for="isoma">Soma: </label>
+            <output name="soma" id="isoma">0</output>
+        </p>
+
+        <p>
+            <label for="i_ano_nascimento">Em que ano você nasceu? </label>
+            <input type="number" name="ano_nascimento" id="i_ano_nascimento" min="1900" max="2024" size="15" 
+            oninput="calc_idade()"><!--Função calc_idade() que está definida na tag script-->
+        </p>
+
+        <p>
+            <label for="id_idade">Sua idade: </label>
+            <output id="id_idade">0</output>
+        </p>
+        
+        
         <p><input type="submit" value="Enviar">  
         <input type="reset" value="Limpar">
         </p>
         
     </form>
+    
+    <script>
+        function calc_idade(){
+            //Variável ano_atual assume o valor do ano atual
+            let ano_atual = new Date().getFullYear()
+            //O valor para o campo de id id_idade é definido pelo valor de ano_atual - valor do campo de id i_ano_nascimento
+            id_idade.innerHTML = Number(ano_atual) - Number(i_ano_nascimento.value)
+        }
+    </script>
 
     <h2>Alguns parâmetros úteis do form</h2>
     <ul>
@@ -197,7 +274,7 @@
         <li>input type checkbox: campo para marcar/desmarcar. Aceita múltiplas marcações.</li>
         <li>input type radio: campo para marcar/desmarcar. Aceita várias marcações. Caso seja preciso delimitar uma escolha somente, usar o mesmo valor nos inputs para o parâmetro <strong>name</strong>.</li>
         <li>input type color: O usuário escolhe uma cor. Pode ser definida uma inicial no parâmetro <strong>value</strong>, assumindo valor <strong>headecimal</strong>.</li>
-        <li>input type range: escolha numa escala. Podem ser definidos <strong>min</strong>, <strong>max</strong> e valor inicial com <strong>value</strong></li>
+        <li>input type range: escolha numa escala. Podem ser definidos <strong>min</strong>, <strong>max</strong> e valor inicial com <strong>value</strong>. A tag output auxilia a mostrar qual o valor que está sendo definido no range.</li>
         <li>input type file: permite o envio de arquivos. Não sar com método get.</li>
         <li>input type submit: botão para enviar as informações dos inputs</li>
         <li>input type reset: botão que limpa os campos</li>
@@ -207,7 +284,7 @@
         <li>minlength: define o tamanho mínimo de caractéres para o campo</li>
         <li>maxlength: define o tamanho máximo de caractéres para o campo</li>
         <li>min: valor mínimo que o campo precisa assumir</li>
-        <li>max: valor máximo que o campo precisa assumir</li>
+        <li>max: valor máximo que o campo precisa assumir (usando o preenchimento da setinha. O usuário pode escrever um valor maior)</li>
         <li>size: define o tamanho da caixa para mostrar x caractéres</li>
         <li>placeholder: uma mensagem que vai aparecer dentro do campo antes do preenchimento</li>
         <li>value: um valor inicial para o campo. Caso seja definido, sobrepõe o placeholder</li>
@@ -217,6 +294,7 @@
         <li>select: gera uma lista de opções para selecionar. Cada campo option value assume um valor. Podem ser agrupados com tag optgroup. Para definir um valor pré-selecionado, usar selected.</li>
         <li>datalist: Cria uma lista de opções que pode ser associada pelo seu id ao campo list do input. Cada campo option assume um valor. Dessa forma, o usuário pode digitar a entrada ou escolher dentre as opções.</li>
         <li>textarea: campos para mensagem. Prâmetro cols delimita quantos caracteres por linha e rows quantas linhas (mas na verdade é infinito).</li>
+        <li>output: mostra algo na tela, mas não envia pelo formulário. A ele podem ser aplicadas resultados de funções para mostrar algo específico. Uma soma, por exemplo. Ela pode ser usada como auxiliar para mostar o valor da tag range.</li>
 
 
     </ul>
