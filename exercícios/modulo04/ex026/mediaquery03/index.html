@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/style.css" media="all">
-    <link rel="stylesheet" href="estilos/retrato.css" media="screen and (orientation: portrait)">
-    <link rel="stylesheet" href="estilos/paisagem.css" media="screen and (orientation: landscape)">
-
+    <link rel="stylesheet" href="estilo/style.css">
 
     <title>Media Query</title>
 </head>
 <body>
     <h1>Media Features</h1>
-    <p>Media Features são recursos para especificar ainda mais o que as Media Types fazem. Ao invés de delimitar somente para telas, com o uso de Media Features, pode-se usar um arquivo CSS somente para telas com orientação retrato e outro arquivo somente para telas com orientação paisagem. Isso é feito especificando no parâmetro media da tag link CSS</p>
+    <p>As media features também podem ser definidas localmente, dentro da tag style do próprio arquivo HTML, ou num arquivo CSS único, usando, para cada tipo de orientação uma regra .</p>
     <pre><code>
-    link rel="stylesheet" href="estilos/retrato.css" media="screen and (orientation: portrait)"
-    link rel="stylesheet" href="estilos/paisagem.css" media="screen and (orientation: landscape)"
-    </code></pre>
+    style
+    @media screen and (orientation: portrait){
+        /*Configurações retrato*/
+    }
 
-    <p>Nesse trecho os media features são "(orientation: portrait)" e "(orientation: landscape)". Se houvesse mais de uma media feature por css, seriam todos separados por parênteses, cada um.</p>
+    @media screen and (orientatiom: landscape){
+        /*Configurações paisagem*/
+    }
+    
+    </code></pre>
 
 </body>
 </html>
