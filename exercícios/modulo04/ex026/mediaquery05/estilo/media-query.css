@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+/*Typical Device Breakpoints
+
+        -De width-
+Telas pequenas - até 600px
+Celular: de 601px a 768px
+Tablet: de 769px a 992px
+Desktop: 993px a 1200px
+Telas grandes: acima de 1200
+*/
+
+/*Para todas as telas do tamanho tablet ou maiores*/
+@media screen and (min-width: 769px){
+    span#burguer{
+        display: none;/*Some ícone menu*/
+    }
+
+    menu#itens{
+        display: block;/*Aparece menu normal*/
+    }
+
+    menu > ul > li{
+        display: inline-block;/*Opções menu um ao lado do outro*/
+    }
+
+    main{
+        max-width: 700px;/*Parte de leitura tem tamanho máximo de 769px*/
+    }
+}

@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--CSS-->
-    <link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="estilo/style.css"><!--CSS phone-->
+    <link rel="stylesheet" href="estilo/media-query.css"><!--Demais formatos-->
     
     <!--Static Ícone Menu-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
     
     <title>Media Query</title>
 </head>
-<body>
+<!--Função mudouTamanho para monitorar o redimensionamento da tela e não deixar o menu bugar e sumir-->
+<body onresize="mudouTamanho()">
     <header>
         <h1>Site com Menu Responsivo</h1>
         <!--
@@ -50,6 +52,17 @@
             }
             else{//se não, clicar..
                 itens.style.display = 'block' //mostra ele
+            }
+        }
+        //Sem essa função, o menu normal não aparece após 
+        //clicar menu hamburguer, recolher menu hamburguer e
+        //depois expandir a tela
+        function mudouTamanho(){
+            if (window.innerWidth >= 769){//se a tela for grande
+                itens.style.display = 'block'//mostra menu normal
+            }
+            else{
+                itens.style.display = 'none'//se não, menu normal fica escondido
             }
         }
     </script>
