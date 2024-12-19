@@ -11,45 +11,68 @@
         div.conteiner1{
             background-color: aqua;
             display: flex;
-            flex-flow: row nowrap;
+            flex-flow: row wrap;
             justify-content: flex-start;
+            height: 200px;
+            align-content: stretch;
         }
+
 
         div.conteiner2{
             background-color: aqua;
             display: flex;
-            flex-flow: row nowrap;
-            justify-content: flex-end;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            height: 200px;
+            align-content: flex-start;
         }
-        
-        
+
         div.conteiner3{
             background-color: aqua;
             display: flex;
-            flex-flow: row nowrap;
-            justify-content: center;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            height: 200px;
+            align-content: flex-end;
         }
-
+        
+        
         div.conteiner4{
             background-color: aqua;
             display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-between;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            height: 200px;
+            align-content: center;
         }
 
         div.conteiner5{
             background-color: aqua;
             display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-evenly;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            height: 200px;
+            align-content: space-between;
         }
 
         div.conteiner6{
             background-color: aqua;
             display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-around;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            height: 200px;
+            align-content: space-evenly;
         }
+
+        div.conteiner7{
+            background-color: aqua;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            height: 200px;
+            align-content: space-around;
+        }
+
       
         div.item{
             background-color: blueviolet;
@@ -62,10 +85,11 @@
     
     
     
-    <title>Justify-content</title>
+    <title>Align-content</title>
 </head>
 <body>
-    <p>justify-content: flex-start</p>
+
+    <p>align-content: stretch</p>
     <div class="conteiner1">
         <div class="item">Exemplo de Bloco A</div>
         <div class="item">Exemplo de Bloco B</div>
@@ -74,7 +98,8 @@
         <div class="item">Exemplo de Bloco E</div>
     </div>
 
-    <p>justify-content: flex-end</p>
+
+    <p>align-content: flex-start</p>
     <div class="conteiner2">
         <div class="item">Exemplo de Bloco A</div>
         <div class="item">Exemplo de Bloco B</div>
@@ -83,7 +108,7 @@
         <div class="item">Exemplo de Bloco E</div>
     </div>
 
-    <p>justify-content: center</p>
+    <p>align-content: flex-end</p>
     <div class="conteiner3">
         <div class="item">Exemplo de Bloco A</div>
         <div class="item">Exemplo de Bloco B</div>
@@ -92,7 +117,7 @@
         <div class="item">Exemplo de Bloco E</div>
     </div>
 
-    <p>justify-content: space-between</p>
+    <p>align-content: center</p>
     <div class="conteiner4">
         <div class="item">Exemplo de Bloco A</div>
         <div class="item">Exemplo de Bloco B</div>
@@ -101,7 +126,7 @@
         <div class="item">Exemplo de Bloco E</div>
     </div>
 
-    <p>justify-content: space-evenly</p>
+    <p>align-content: space-between</p>
     <div class="conteiner5">
         <div class="item">Exemplo de Bloco A</div>
         <div class="item">Exemplo de Bloco B</div>
@@ -110,8 +135,17 @@
         <div class="item">Exemplo de Bloco E</div>
     </div>
 
-    <p>justify-content: space-around</p>
+    <p>align-content: space-evenly</p>
     <div class="conteiner6">
+        <div class="item">Exemplo de Bloco A</div>
+        <div class="item">Exemplo de Bloco B</div>
+        <div class="item">Exemplo de Bloco C</div>
+        <div class="item">Exemplo de Bloco D</div>
+        <div class="item">Exemplo de Bloco E</div>
+    </div>
+
+    <p>align-content: space-around</p>
+    <div class="conteiner7">
         <div class="item">Exemplo de Bloco A</div>
         <div class="item">Exemplo de Bloco B</div>
         <div class="item">Exemplo de Bloco C</div>
