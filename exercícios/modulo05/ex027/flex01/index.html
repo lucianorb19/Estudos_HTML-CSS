@@ -28,7 +28,7 @@
 </head>
 <body>
     <h1>Flexible Box</h1>
-    <p>É um recurso que permite criar contêineres flexíveis, cujos conteúdos se adaptam ao tamanho da tela. Isso pode ser feito definindo na CSS do contêiner <mark>display: flex</mark> e na CSS do item, <mark>flex: auto</mark> (não deixa espaços em branco no pai). No exemplo abaixo, uma div da classe conteiner, com várias divs da classe item, usando o flexbox básico:</p>
+    <p>É um recurso que permite criar contêineres flexíveis, cujos conteúdos se adaptam ao tamanho dos eixos principal e transversal. Isso pode ser feito definindo na CSS do contêiner <mark>display: flex</mark> e na CSS do item, <mark>flex: auto</mark> (não deixa espaços em branco no pai). No exemplo abaixo, uma div da classe conteiner, com várias divs da classe item, usando o flexbox básico:</p>
 
     <div class="conteiner">
         <div class="item">A</div>
@@ -38,17 +38,7 @@
         <div class="item">E</div>
     </div>
 
-    <h1>Definições Conteiner - Pai</h1>
-    <h2>Flex Direction</h2>
-    <ul>
-        <li>flex-direction: row - elementos aparecem em linha da esquerda para a direita;</li>
-        <li>flex-direction: row-reverse - da direita para esquerda;</li>
-        <li>flex-direction: column - elementos dispostos de cima para baixo;</li>
-        <li>flex-direction: column-reverse - de baixo pra cima</li>
-    </ul>
-
     <h2>Eixos (axis)</h2>
-    <p>O que os eixos representam varia de acordo com a flex-direction. Considerando a flex-direction row:</p>
     <ul>
         <li>main-axis - eixo principal</li>
         <li>main-start - início do eixo principal</li>
@@ -64,11 +54,24 @@
 
     <img width="500" src="../imagens/eixos2.png" alt="Eixos - Resumão">
 
+    <h1>Definições Conteiner - Pai</h1>
+    <h2>Flex Direction</h2>
+    <ul>
+        <li>flex-direction: <mark>row</mark> - elementos aparecem em linha da esquerda para a direita;</li>
+        <li>flex-direction: <mark>row-reverse</mark> - da direita para esquerda;</li>
+        <li>flex-direction: <mark>column</mark> - elementos dispostos de cima para baixo;</li>
+        <li>flex-direction: <mark>column-reverse</mark> - de baixo pra cima</li>
+    </ul>
+
+    
+
+    
+
     <h2>Flex-wrap</h2>
     <ul>
-        <li>flex-wrap: nowrap - a sequência de itens não é quebrada. Os itens mudam suas dimensões para não aumentar/diminuir o número de linhas/colunas;</li>
-        <li>flex-wrap: wrap - quebra a sequência no sentido do eixo transversal. Ou seja, se estiver em row, o item que não cabe vai pra próxima linha abaixo. Se estiver em coluna, o item que não coube vai para a próxima coluna à direita;</li>
-        <li>flex-wrape: wrap-reverse - quebra a sequência no sentido inverso ao do eixo transversal.</li>
+        <li>flex-wrap: <mark>nowrap</mark> - a sequência de itens não é quebrada. Os itens mudam suas dimensões para não aumentar/diminuir o número de linhas/colunas;</li>
+        <li>flex-wrap: <mark>wrap</mark> - quebra a sequência no sentido do eixo transversal. Ou seja, se estiver em row, o item que não cabe vai pra próxima linha abaixo. Se estiver em coluna, o item que não coube vai para a próxima coluna à direita;</li>
+        <li>flex-wrape: <mark>wrap-reverse</mark> - quebra a sequência no sentido inverso ao do eixo transversal.</li>
     </ul>
 
     <p><strong>flex-wrap: wrap</strong></p>
@@ -78,13 +81,37 @@
     <img width="500" src="../imagens/flex-wrap-wrap-reverse.png" alt="">
 
     <h2>Flex-flow</h2>
-    <p>É um shorthand para agrupar no mesmo campo as definições de flex-direction e flex-wrap. É mais recomendável usar o flex-flow do que as declarações separadas de direction e wrap.</p>
+    <p>É um shorthand para agrupar no mesmo campo as definições de <mark>flex-direction e flex-wrap</mark>. É mais recomendável usar o flex-flow do que as declarações separadas de direction e wrap.</p>
 
     <ul>
         <li>flex-flow: row nowrap</li>
         <li>flex-flow: row wrap</li>
         <li>flex-flow: row wrap-reverse</li>
         <li>flex-flow: column nowrap .......</li>
+    </ul>
+
+    <h2>Justify-content</h2>
+    <p>Alinha o conteúdo do contêiner em relação ao eixo principal.</p>
+
+    <ul>
+        <li>justify-content: <mark>flex-start</mark> - o primeiro elemento fica junto ao main-start e o espaço em branco, caso haja, do lado do main-end;</li>
+        <li>justify-content: <mark>flex-end</mark> - o último elemento fica junto ao main-end e o espaço em branco, caso haja, do lado do main-start;</li>
+        <li>justify-content: <mark>center</mark> - elementos no centro do eixo principal;</li>
+        <li>justify-content: <mark>space-betwen</mark> - primeiro elemento junto ao main-start, último elemento junto ao main-end e os demais distribuídos no meio com espaços iguais entre eles;</li>
+        <li>justify-content: <mark>space-evenly</mark> - todos elementos com espaços iguais entre eles, incluindo o primeiro e último;</li>
+        <li>justify-content: <mark>space-around</mark> - divide a área do contêiner pelo número de elementos, e cada elemento fica no centro de cada uma dessas divisões.</li>
+    </ul>
+
+    <h2>Align-items</h2>
+    <p>Alinha o conteúdo em relação ao eixo transversal</p>
+    <ul>
+        <li>Align-items: <mark>stretch</mark> - estica o elemento de acordo com o tamanho do cross-axis (eixo transversal);</li>
+        <li>Align-items: <mark>flex-start</mark> - o primeiro elemento fica junto ao cross-start e o espaço em branco, caso haja, do lado do cross-end;</li>
+        <li>Align-items: <mark>flex-end</mark> - o último elemento fica junto ao cross-end e o espaço em branco, caso haja, do lado do cross-start;</li>
+        <li>Align-items: <mark>center</mark> - elementos no centro do eixo transversal;</li>
+        <li>align-items: </li>
+        <li>align-items: </li>
+        <li>align-items: </li>
     </ul>
     
 </body>
