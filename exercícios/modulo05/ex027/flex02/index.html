@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            font-family: Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        div{
+            background-color: aqua;
+            display: flex;
+        }
+        
+        div.conteiner1{
+            flex-direction: row;/*Padrão*/
+        }
+
+        div.conteiner2{
+            flex-direction: row-reverse;
+        }
+
+        div.conteiner3{
+            flex-direction: column;
+        }
+
+        div.conteiner4{
+            flex-direction: column-reverse;
+        }
+
+        div.item{
+            background-color: blueviolet;
+            color: white;
+            border: 1px solid black;
+            text-align: center;/*Não funciona*/
+            padding: 15px;
+        }
+    </style>
+    
+    
+    
+    <title>Flex Box</title>
+</head>
+<body>
+    <p>Conteiner - flex-direction: row</p>
+    <div class="conteiner1">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+
+    <p>Conteiner - flex-direction: row-reverse</p>
+    <div class="conteiner2">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+
+    <p>Conteiner - flex-direction: column</p>
+    <div class="conteiner3">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+
+    <p>Conteiner - flex-direction: column-reverse</p>
+    <div class="conteiner4">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+
+    
+</body>
+</html>

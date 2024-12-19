@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            font-family: Calibri, 'Trebuchet MS', sans-serif;
+            text-align: justify;
+        }
+        div.conteiner{
+            background-color: aqua;
+            display: flex;
+        }
+
+        div.item{
+            background-color: blueviolet;
+            color: white;
+            border: 1px solid black;
+            text-align: center;
+            flex: auto;
+        }
+    </style>
+    
+    
+    
+    <title>Flex Box</title>
+</head>
+<body>
+    <h1>Flexible Box</h1>
+    <p>É um recurso que permite criar contêineres flexíveis, cujos conteúdos se adaptam ao tamanho da tela. Isso pode ser feito definindo na CSS do contêiner <mark>display: flex</mark> e na CSS do item, <mark>flex: auto</mark>. No exemplo abaixo, uma div da classe conteiner, com várias divs da classe item, usando o flexbox básico:</p>
+
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+
+    <h1>Definições Conteiner - Pai</h1>
+    <h2>Flex Direction</h2>
+    <ul>
+        <li>flex-direction: row - elementos aparecem em linha da esquerda para a direita;</li>
+        <li>flex-direction: row-reverse - da direita para esquerda;</li>
+        <li>flex-direction: column - elementos dispostos de cima para baixo;</li>
+        <li>flex-direction: column-reverse - de baixo pra cima</li>
+    </ul>
+
+    <h2>Eixos (axis)</h2>
+    <p>O que os eixos representam varia de acordo com a flex-direction. Considerando a flex-direction row:</p>
+    <ul>
+        <li>main-axis - eixo principal</li>
+        <li>main-start - início do eixo principal</li>
+        <li>main-end - fim do eixo principal</li>
+        <li>cross-axis - eixo transversal;</li>
+        <li>cross-start - início do eixo transversal;</li>
+        <li>cross-end - fim do eixo transversal</li>
+    </ul>
+
+    <img width="500" src="../imagens/eixos1.png" alt="Eixos1">
+
+    <p><strong>Em resumo:</strong> </p>
+
+    <img width="500" src="../imagens/eixos2.png" alt="Eixos - Resumão">
+    
+</body>
+</html>
