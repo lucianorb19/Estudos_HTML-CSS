@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        *{
+            margin: 2px;
+            padding: 2px; /*só pra ajustar a estética*/
+        }
+        
+        body{
+            background-color: aqua;
+            font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+        }
+
+        main{
+            background-color: rgb(92, 182, 152);
+            width: 95vw;
+            height: 95vh;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center ;
+            align-items: center;
+        }
+
+        section{
+            background-color: rgba(46, 46, 255, 0.751);
+            color: white;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+    
+    
+    <title>Exemplo Tela de Login centralizada</title>
+</head>
+<body>
+    <p>Body</p>
+    <main>
+        <p>Main</p>
+        <section>
+            Section
+            <h1>Tela de Login</h1>
+            <p>Essa tela de login (uma section) estará sempre centralizada dentro do main. Para centralizá-la, usa-se no pai dela (main): 
+<code><pre>
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+</pre><code>
+
+            </p>
+        </section>
+    </main>
+    
+</body>
+</html>
