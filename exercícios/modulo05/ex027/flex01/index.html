@@ -28,7 +28,7 @@
 </head>
 <body>
     <h1>Flexible Box</h1>
-    <p>É um recurso que permite criar contêineres flexíveis, cujos conteúdos se adaptam ao tamanho da tela. Isso pode ser feito definindo na CSS do contêiner <mark>display: flex</mark> e na CSS do item, <mark>flex: auto</mark>. No exemplo abaixo, uma div da classe conteiner, com várias divs da classe item, usando o flexbox básico:</p>
+    <p>É um recurso que permite criar contêineres flexíveis, cujos conteúdos se adaptam ao tamanho da tela. Isso pode ser feito definindo na CSS do contêiner <mark>display: flex</mark> e na CSS do item, <mark>flex: auto</mark> (não deixa espaços em branco no pai). No exemplo abaixo, uma div da classe conteiner, com várias divs da classe item, usando o flexbox básico:</p>
 
     <div class="conteiner">
         <div class="item">A</div>
@@ -63,6 +63,29 @@
     <p><strong>Em resumo:</strong> </p>
 
     <img width="500" src="../imagens/eixos2.png" alt="Eixos - Resumão">
+
+    <h2>Flex-wrap</h2>
+    <ul>
+        <li>flex-wrap: nowrap - a sequência de itens não é quebrada. Os itens mudam suas dimensões para não aumentar/diminuir o número de linhas/colunas;</li>
+        <li>flex-wrap: wrap - quebra a sequência no sentido do eixo transversal. Ou seja, se estiver em row, o item que não cabe vai pra próxima linha abaixo. Se estiver em coluna, o item que não coube vai para a próxima coluna à direita;</li>
+        <li>flex-wrape: wrap-reverse - quebra a sequência no sentido inverso ao do eixo transversal.</li>
+    </ul>
+
+    <p><strong>flex-wrap: wrap</strong></p>
+    <img width="500" src="../imagens/flex-wrap-wrap.png" alt="Flex-wrap">
+
+    <p><strong>flex-wrap: wrap-reverse</strong></p>
+    <img width="500" src="../imagens/flex-wrap-wrap-reverse.png" alt="">
+
+    <h2>Flex-flow</h2>
+    <p>É um shorthand para agrupar no mesmo campo as definições de flex-direction e flex-wrap. É mais recomendável usar o flex-flow do que as declarações separadas de direction e wrap.</p>
+
+    <ul>
+        <li>flex-flow: row nowrap</li>
+        <li>flex-flow: row wrap</li>
+        <li>flex-flow: row wrap-reverse</li>
+        <li>flex-flow: column nowrap .......</li>
+    </ul>
     
 </body>
 </html>
