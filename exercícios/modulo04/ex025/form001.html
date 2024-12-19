@@ -111,7 +111,7 @@
             <fieldset>
                 <legend>Esportes Favoritos</legend>
 
-                <input type="checkbox" name="futebol" id="ifutebol">
+                <input type="checkbox" name="futebol" id="ifutebol" checked>
                 <label for="ifutebol">Futebol</label> <br>
 
                 <input type="checkbox" name="basquete" id="ibasquete">
@@ -198,7 +198,8 @@
         
         <p>
             <label for="inumero1">Número 1: </label>
-            <input type="number" name="numero1" id="inumero1" min="1" max="50" placeholder="1 a 50" required oninput="isoma.innerHTML = Number(inumero1.value) + Number(inumero2.value)">
+            <input type="number" name="numero1" id="inumero1" min="1" max="50" placeholder="1 a 50" required 
+            oninput="isoma.innerHTML = Number(inumero1.value) + Number(inumero2.value)">
             <!--
             isoma.innerHTML = - o que vai ser definido para o valor do campo de id isoma
             Number(inumero1.value) + Number(inumero2.value) - a soma de dois valores - campos de id inumero1 e inumero2
@@ -206,7 +207,8 @@
             <br>
 
             <label for="inumero2">Número 2: </label>
-            <input type="number" name="numero2" id="inumero2" min="1" max="50" placeholder="1 a 50" required oninput="isoma.innerHTML = Number(inumero1.value) + Number(inumero2.value)">
+            <input type="number" name="numero2" id="inumero2" min="1" max="50" placeholder="1 a 50" required 
+            oninput="isoma.innerHTML = Number(inumero1.value) + Number(inumero2.value)">
             <br>
             <!--
             isoma.innerHTML = - o que vai ser definido para o valor do campo de id isoma
