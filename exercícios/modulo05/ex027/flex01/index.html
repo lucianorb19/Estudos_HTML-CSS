@@ -102,6 +102,8 @@
         <li>justify-content: <mark>space-around</mark> - divide a área do contêiner pelo número de elementos, e cada elemento fica no centro de cada uma dessas divisões.</li>
     </ul>
 
+ 
+
     <h2>Align-items</h2>
     <p>Alinha o conteúdo em relação ao eixo transversal</p>
     <ul>
@@ -123,6 +125,68 @@
         <li>align-content: <mark>space-evenly</mark> - todos elementos com espaços iguais entre eles, incluindo o primeiro e último;</li>
         <li>align-content: <mark>space-around</mark> - divide a área do contêiner pelo número de elementos, e cada elemento fica no centro de cada uma dessas divisões.</li>
     </ul>
+
+    <h1>Definições Conteúdo - Filhos</h1>
     
+    <H2>Order</H2>
+    <p>É um parâmetro CSS que pode ser definido para cada item dentro do contêiner flex. Ele assume um valor numérico, e pelo seu valor, os itens são ordenados pela ordem crescente dos números dentro do contêiner. Isso pode ser feito de duas formas, definindo inline o parâmetro order:</p>
+
+    <pre><code>
+    div style="order: -2;">A
+    div style="order: 5;">B
+    div style="order: 0;">C
+    </code></pre>
+
+    <p>ou criando uma id para cada elemento e definindo seu parâmetro order na tag style:</p>
+
+    <pre><code>
+        div id="itemA">A
+        div id="itemB">B
+        div id="itemC">C
+    </code></pre>
+
+    <pre><code>
+    style>
+        div#itemA{
+            order: 3;
+        }
+
+        div#itemB{
+            order: 0;
+        }
+
+        div#itemC{
+            order: 2;
+        }
+    style>
+    </code></pre>
+
+
+    <h2>Align-self</h2>
+    <p>Define o alinhamento do próprio item (e não de todos eles), em relação ao eixo transversal.</p>
+    <ul>
+        <li>auto / inherit: ele herda o alinhamento (align-content ou align-items) do pai;</li>
+        <li>flex-start: alinhamento no cros start;</li>
+        <li>flex-end: alinhamento no cross-end;</li>
+        <li>center: alinhamento ao centro do cross-axis;</li>
+        <li>stretch: estica o conteúdo em relação ao cross-axis.</li>
+    </ul>
+
+    <img width="500" src="../imagens/align-self.png" alt="Align-self">
+
+
+    <h2>Flex-basis</h2>
+    <p>Define o alinhamento do próprio item (e não de todos eles) em relação ao eixo principal.</p>
+
+    <ul>
+        <li>auto: largura do item é dada pelo tamanho de seu conteúdo;</li>
+        <li>Xpx: largura do item é de Xpx, mas a depender do conteúdo, se não couber dentro do contêiner todos itens com a medida Xpx, cada elemento é diminuído até o mínimo possível;</li>
+        <li> </li>
+        <li> </li>
+        <li> </li>
+    </ul>
+
+    
+
 </body>
 </html>

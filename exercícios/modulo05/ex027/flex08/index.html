@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            font-family: Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        div.conteiner1{
+            background-color: aqua;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            height: 200px;
+        }
+
+      
+        div.item{
+            background-color: blueviolet;
+            color: white;
+            border: 1px solid black;
+            text-align: center;/*Não funciona*/
+            padding: 15px;
+            flex-basis: auto;
+        }
+
+        div.item1{
+            background-color: blueviolet;
+            color: white;
+            border: 1px solid black;
+            text-align: center;/*Não funciona*/
+            padding: 15px;
+            flex-basis: 100px;
+        }
+
+        div#A{
+            
+        }
+
+        div#B{
+            
+        }
+
+        div#C{
+            
+        }
+
+        div#D{
+            
+        }
+
+        div#E{
+           
+        }
+    </style>
+    
+    
+    
+    <title>Flex-basis</title>
+</head>
+<body>
+
+    <p>Flex-basis: auto</p>
+    <div class="conteiner1">
+        <div class="item" >A</div>
+        <div class="item" >bloco B</div>
+        <div class="item" >bloco C</div>
+        <div class="item" >bloco D</div>
+        <div class="item" >bloco EEEEEEEE</div>
+    </div>
+
+    <p>Flex-basis: Xpx</p>
+    <div class="conteiner1">
+        <div class="item1">A</div>
+        <div class="item1">bloco B</div>
+        <div class="item1">bloco C</div>
+        <div class="item1">bloco D</div>
+        <div class="item1">bloco EEEEEEEE</div>
+    </div>
+
+</body>
+</html>

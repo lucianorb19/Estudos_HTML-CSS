@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            font-family: Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        div.conteiner1{
+            background-color: aqua;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            height: 200px;
+        }
+
+      
+        div.item{
+            background-color: blueviolet;
+            color: white;
+            border: 1px solid black;
+            text-align: center;/*Não funciona*/
+            padding: 15px;
+        }
+
+        div#A{
+            align-self: auto;/*stretch do pai*/
+        }
+
+        div#B{
+            align-self: flex-start;
+        }
+
+        div#C{
+            align-self: flex-end;
+        }
+
+        div#D{
+            align-self: center;
+        }
+
+        div#E{
+            align-self: stretch;
+        }
+    </style>
+    
+    
+    
+    <title>Align-self</title>
+</head>
+<body>
+
+    <p>Align-self</p>
+    <div class="conteiner1">
+        <div class="item" id="A">A auto</div>
+        <div class="item" id="B">B flex-start</div>
+        <div class="item" id="C">C flex-end</div>
+        <div class="item" id="D">D center</div>
+        <div class="item" id="E">E stretch</div>
+    </div>
+
+</body>
+</html>
