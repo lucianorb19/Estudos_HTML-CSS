@@ -161,6 +161,14 @@
     style>
     </code></pre>
 
+    <h2>Flex-basis</h2>
+    <p>Define o alinhamento do próprio item (e não de todos eles) em relação ao eixo principal.</p>
+
+    <ul>
+        <li>auto: largura do item é dada pelo tamanho de seu conteúdo;</li>
+        <li>Xpx: largura do item é de Xpx, mas a depender do conteúdo, se não couber dentro do contêiner todos itens com a medida Xpx, cada elemento é diminuído até o mínimo possível;</li>
+    </ul>
+
 
     <h2>Align-self</h2>
     <p>Define o alinhamento do próprio item (e não de todos eles), em relação ao eixo transversal.</p>
@@ -175,16 +183,18 @@
     <img width="500" src="../imagens/align-self.png" alt="Align-self">
 
 
-    <h2>Flex-basis</h2>
-    <p>Define o alinhamento do próprio item (e não de todos eles) em relação ao eixo principal.</p>
-
-    <ul>
-        <li>auto: largura do item é dada pelo tamanho de seu conteúdo;</li>
-        <li>Xpx: largura do item é de Xpx, mas a depender do conteúdo, se não couber dentro do contêiner todos itens com a medida Xpx, cada elemento é diminuído até o mínimo possível;</li>
-    </ul>
-
     <h2>Flex-shrink e flex-grow</h2>
     <p>Definem se um elemento pode encolher (shrink) e crescer (grow). Por padrão, flex-shrink assume valor 1 (pode encolher) e flex-grow assume valor 0 (não pode crescer). Esses parâmetros também assumem valores 2, 3, 4,... significando que em relação ao parâmetro que tem valor 1, eles crescem/diminuem 2,3,4 vezes mais.</p>
+
+    <h2>Flex</h2>
+    <p>Um shorthand que engloba <mark>flex-grow, flex-shrink e flex-basis</mark>. É recomendado usar este shorthand no lugar das declarações individuais. Alguns valores para flex já são padrões, logo, há nomes específicos para eles</p>
+    <ul>
+        <li>flex: <mark>initial</mark> - 0 1 auto - valores padrões para grow, shrink e basis;</li>
+        <li>flex: <mark>none</mark> - 0 0 auto - tamanhos não aumentam e nem diminuem, sua largura é definida pelo tamanho do contêiner;</li>
+        <li>flex: <mark>auto</mark> - 1 1 auto - totalmente flexível;</li>
+        <li>flex: <mark>x</mark> - x 1 auto - só é definido o valor de grow e os demais ficam padrão.</li>
+        <li></li>
+    </ul>
 
     
 
