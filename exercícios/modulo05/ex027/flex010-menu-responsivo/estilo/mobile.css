@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+
+/*título e menu - itens em coluna*/
+header, header > nav{
+    flex-flow: column nowrap;
+}
+
+/*Eixo principal do h1 (coluna) com 50px*/
+header > h1{
+    flex-basis:50px;
+}
+
+/*links ocupam grande parte da tela*/
+header > nav > a{
+    width: 90vw;
+}
