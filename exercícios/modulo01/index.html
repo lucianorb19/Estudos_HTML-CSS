@@ -70,15 +70,14 @@
         </p>
 
         <p>Ícones em Google Icons -  https://developers.google.com/fonts/docs/material_icons?hl=pt-br. Habilitar a API de Icons do Google com código:</p>
-        <pre><code>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        rel="stylesheet">
-        </code></pre>
+        
+        <strong>link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></strong> <br>
+        
 
         <p>E aplicar no código, para cada ícone:</p>
-        <pre><code>
-        <span class="material-icons">face</span>
-        </code></pre>
+       
+        <strong>span class="material-icons">face /span></strong>
+        
 
         <p>Trocando o nome <mark>face</mark> pelo nome do ícone desejado. Nome sempre em minúsculo e sem espaço. Todos os ícones e seus nomes estão em https://fonts.google.com/icons</p>
 
@@ -100,7 +99,7 @@
     <p>Favicons são os ícones que aparecem na aba do navegador. Para definir um favicon, usar a <strong>tag link: favicon</strong> no head, acima do título, definindo em <strong>href</strong> seu caminho.</p>
 
     <h1>Hierarquia de títulos</h1>
-    <p>Títulos h1 são os mais acima de todos, e a medida que aumenta o h (h2,h3,h4...), eles abaixam de categoria/tamanho. É importante usá-los adequadamente para a semântica do site.</p>
+    <p>Títulos h1 são os mais acima de todos, e a medida que aumenta o h (h2,h3,h4...h6), eles abaixam de categoria/tamanho. É importante usá-los adequadamente para a semântica do site.</p>
     <h2>Exemplo:</h2>
 
     <h2>Introdução</h2>
@@ -150,7 +149,7 @@
             </p>
 
         <h2>Texto grande e pequeno</h2>
-            <p><big>Texto grande</big> e <small>texto pequeno</small>. A tag big já está caindo em desuso</p>
+            <p><big>Texto grande</big> e <small>texto pequeno</small>. A tag big já caiu em desuso</p>
 
         <h2>Texto tachado</h2>
             <p><del>Tag del</del> para indicar um texto deletado</p>
@@ -213,7 +212,7 @@
         <li>Lavar o rosto</li>
         <li>Organizar marmita
     </ol>
-    <p>Os parâmetros do <strong>ol</strong> são type (tipo de enumeração) e <strong>star</strong> (início da enumeração)</p>
+    <p>Os parâmetros do <strong>ol</strong> são type (tipo de enumeração) e <strong>start</strong> (1,2,3,....)</p>
 
     <h2>Listas sem ordenação</h2>
     <p>Tag <strong>ul</strong></p>
@@ -243,7 +242,7 @@
         </ol>
     </ul>
 
-    <p><strong>Macete</strong>: Para mudar múltiplos trechos do código de uma única vez, pressionar alt e ir clicando.</p>
+    <p><strong>Dica</strong>: Para mudar múltiplos trechos do código de uma única vez, pressionar alt e ir clicando.</p>
 
     <h2>Lista de Definição</h2>
     <p>É uma lista com um termo e sua respectiva definição. É feita usando a tag <strong>dl</strong>, e dentro as tags <strong>dt e dd</strong></p>
@@ -261,7 +260,7 @@
 
     <p>Vídeo top <a href="https://www.youtube.com/watch?v=_jZ6WDKgQvY">aqui</a></p>
 
-    <p>Para usar o link no texto, mas em uma nova aba, usar os parâmetros <strong>target="_blank rel="external"</strong></p>
+    <p>Para usar o link no texto, mas em uma nova aba, usar os parâmetros <strong>target="_blank" rel="external"</strong></p>
 
     <p>Outro vídeo top <a href="https://www.youtube.com/watch?v=uNrsMRIOnwQ" target="_blank" rel="external">aqui</a></p>
 
@@ -269,7 +268,7 @@
     <p>São links para outras páginas do mesmo site. Ela pode ser referenciada pelo seu caminho</p>
     <p>Página 2 <a href="pag02.html" target="_blank" rel="external">aqui</a></p>
 
-    <p>Para criar uma semântica dos caminhos nas página, quando o link para para uma próxima página do site, usa-se o <strong>rel="next"</strong>. E nessa página próxima, quando o link retorna, <strong>rel="prev"</strong>. O parâmetro <strong>rel="nofollow"</strong> indica que o site não dá o seu aval do site no link para o mecanismo de busca.Quando não é definido, o rel é <strong>"_self"</strong> por padrão</p>
+    <p>Para criar uma semântica dos caminhos nas página, quando o link é para uma próxima página do site, usa-se o <strong>rel="next"</strong>. E nessa página próxima, quando o link retorna, <strong>rel="prev"</strong>. O parâmetro <strong>rel="nofollow"</strong> indica que o site não dá o seu aval do site no link para o mecanismo de busca.Quando não é definido, o rel é <strong>"_self"</strong> por padrão</p>
 
     <p>Em certas situações, para acessar páginas que estão em pastas superiores, é preciso usar o <strong>../ (significa volte uma pasta, no linux)</strong></p>
 
@@ -282,7 +281,7 @@
 
     <p>Download rar livro <a href="livro/livro1.rar" download="livro1.rar" type="application/rar" target="_blank" rel="external">aqui</a></p>
 
-    <p>Em alguma situações, conferir qual o valor para o parâmetro type, de acordo com o tipo do arquivo, seguindo oq está no site <a href="https://www.iana.org/assignments/media-types/media-types.xhtml" target="_blank" rel="external">iana.org/assigments/media-types</a></p>
+    <p>Em alguma situações, conferir qual o valor para o parâmetro type, de acordo com o tipo do arquivo, seguindo o que está no site <a href="https://www.iana.org/assignments/media-types/media-types.xhtml" target="_blank" rel="external">iana.org/assigments/media-types</a></p>
 
     <h1>Imagem dinâmica</h1>
     <p>Uma imagem dinâmica é uma que muda seu tamanho a depender da quatidade de pixel disponíveis na tela. <br>
@@ -311,9 +310,20 @@
     <p>A reprodução de áudio no site pode ser feita pela <strong>tag audio</strong>. <br>
     O parâmetro <strong>preload</strong> pode assumir 3 valores: <strong>auto</strong>(que só executa após carregar todo o arquivo); <strong>metadata</strong> (que baixa alguns metadados) e <strong>none</strong> (que não carrega nada). <br>
     <strong>autoplay</strong> reproduz o áudio automaticamente. <strong>controls</strong> exibe uma interface simples para o áudio. <strong>loop</strong> mantém o áudio em loop. <br>
-    O parâmetro <strong>source: src</strong> é usados para que o código tenha compatibilidade com diversos tipos de arquivo de áudio (mp3,ogg,wav,...). Ele tenta executar primeiro a linha mais acima, e vai descendo a medida que não consegue. Ao final pode ser colocado uma mensagem que acusa a impossibilidade de executar o áudio, com uma opção para download.</p>
+    O parâmetro <strong>source src</strong> é usados para que o código tenha compatibilidade com diversos tipos de arquivo de áudio (mp3,ogg,wav,...). Ele tenta executar primeiro a linha mais acima, e vai descendo a medida que não consegue. Ao final pode ser colocado uma mensagem que acusa a impossibilidade de executar o áudio, com uma opção para download.</p>
     
     <p>Dica: arquivo wav são muito pesados. Procure evitá-los.</p>
+    
+    <code>
+        <pre>
+            audio preload="metadata" autoplay controls loop>
+                source src="midia/dbz.mp3" type="audio/mpeg">
+                source src="midia/dbz.ogg" type="audio/ogg">
+                source src="midia/dbz.wav" type="audio/wav">
+                p>Navegador não reproduz o áudio!   a href="midia/dbz.mp3">Baixar a> p>
+            audio>
+        </pre>
+    </code>
 
     <audio preload="metadata" autoplay controls loop>
         <source src="midia/dbz.mp3" type="audio/mpeg">
@@ -341,25 +351,25 @@
         </p>
     </video>
 
-    <p>Dica: conversão de vídeos com handbrake</p>
+    <p>Dica: conversão de vídeos com <strong>handbrake</strong></p>
 
-    <p>Dica: Dentro da tag videos, o parâmetro poster pode ser usado para definir uma capa.</p>
+    <p>Dica: Dentro da tag videos, o parâmetro <mark>poster</mark> pode ser usado para definir uma capa.</p>
 
     <h2>Vídeos Externos</h2>
     <p>Existem serviços de hospedagem de vídeo que podem ser usados, já que usar estes serviços é menos custoso (banda) do que hospedar localmente. Nesse caso, só é necessário referenciar no código ao vídeo do serviço externo. No youtube, por exemplo, os vídeos podem ser incorporados, na opção "incorporar", que já gera o código html necessário com a tag <strong>iframe</strong>. Importante ressaltar que esse serviço do youtube só permite disponiblizar vídeos que são públicos para todos.</p>
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/tpUslbsyPU8?si=hKiqF5FMQkuPoREo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-    <p>Outra opção viável é o vimeo, que ofere o mesmo serviço, com opções pagas, mas com opções de controle de acesso (vídeos privados).</p>
+    <p>Outra opção viável é o <mark>vimeo</mark>, que ofere o mesmo serviço, com opções pagas, mas com opções de controle de acesso (vídeos privados).</p>
 
     <h1>Estilos Inline (prática trabalhosa)</h1>
     <p>As CSS podem ser aplicadas <strong>diretamente nas linhas das tags</strong> com os parâmetros desejados. Essa abordagem é trabalhosa e é melhor para ser usada em ajustes pontuais. Por exemplo, em uma <strong>tag h2</strong> definir <strong>style="color:mediumturquoise;"</strong></p>
 
-    <h2>Sub-título</h2>
+    <h2 style="color: mediumturquoise;">Sub-título</h2>
 
     <p>Ou definir a cor de fundo com o parâmetro style="background-color:..."</p>
 
-    <h2>Outro Sub-título</h2>
+    <h2 style="background-color: mediumturquoise; color: white;" >Outro Sub-título</h2>
 
     <p>Dicas: <br>
         style="color:" - cor da letra <br>
@@ -368,19 +378,16 @@
     </p>
 
     <h1>Estilos Locais/Internos</h1>
-    <p>A definição de estilos também pode ser feita <strong>na tag head</strong>, usando a <strong>tag style</strong>. Nesse caso, todas as definições para cada <strong>seletor (body, h1,h2,p,...)</strong> é aplicada a toda a página html atual. <br> 
+    <p>A definição de estilos também pode ser feita <mark>na tag head</mark>, usando a <mark>tag style</mark>. Nesse caso, todas as definições para cada <mark>seletor (body, h1,h2,p,...)</mark> é aplicada a toda a página html atual. <br> 
     As desvantagens desse método são: o código para o estilo geralmente é maior que o próprio código do corpo da página; para aplicar o estilo, é preciso aplicar o código para cada página html. </p>
 
     <h1>Estilos Externos</h1>
-    <p>As definições de estilo podem ser feitas <strong>em arquivos CSS</strong> separados do HTML. Esses aquivos .css só precisam ser referenciados na head com a <strong>tag link:css</strong>. <br>
+    <p>As definições de estilo podem ser feitas <mark>em arquivos CSS</mark> separados do HTML. Esses aquivos .css só precisam ser referenciados na head com a <mark>tag link:css</mark>. <br>
     Essa técnica é mais versátil, e permite criar diferentes aquivos CSS com diferentes estilos. Além disso, numa mesma página, podem ser adicionais mais de um CSS, caso haja a necessidade de estilos adicionais.
     <br>
     Lembrando que: a prioridade das configurações CSS é maior no Inline -> Local -> Externo.
 </p>
-
-    <a href="pagina2.html">Página 2</a>
  
-
 
 
 </body>

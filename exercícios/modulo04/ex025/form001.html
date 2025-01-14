@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body{
-            font-size: 1.2em;
+            font-size: 1.3em;
         }
 
         body{
@@ -60,10 +60,10 @@
     </form>
 
     <h2>Métodos get e post</h2>
-    <p>O parâmetro <mark>method</mark> da tag form assume dois valores, <mark>get e post</mark>, que são os métodos de envio da informação dos formulários para a página que vai utilizá-los. O <mark>get</mark> mostra os valores <mark>na url</mark>, o <mark>post não</mark>, porém, nenhum dos dois é seguro. Recomenda-se usar o get para infoções não sensíveis e o post para informações mais sigilosas. Além disso, o get é limitado a 3mil bytes, não deve ser usado para dados sensíveis e nem para envio de arquivos.</p>
+    <p>O parâmetro <mark>method</mark> da tag form assume dois valores, <mark>get e post</mark>, que são os métodos de envio da informação dos formulários para a página que vai utilizá-los. O <mark>get</mark> mostra os valores <mark>na url</mark>, o <mark>post não</mark>, porém, nenhum dos dois é seguro. Recomenda-se usar o get para informações não sensíveis e o post para informações mais sigilosas. Além disso, o get é limitado a 3mil bytes, não deve ser usado para dados sensíveis e nem para envio de arquivos.</p>
 
 
-    <form action="cadastro.php" method="post">
+    <form action="" method="post">
         <p>
             <label for="iusuario">Usuário</label>
             <input type="text" name="usuario" id="iusuario" required maxlength="30" size="20" autocomplete="username">
@@ -221,7 +221,7 @@
 
         <p>
             <label for="i_ano_nascimento">Em que ano você nasceu? </label>
-            <input type="number" name="ano_nascimento" id="i_ano_nascimento" min="1900" max="2024" size="15" 
+            <input type="number" name="ano_nascimento" id="i_ano_nascimento" min="1900" max="2025" size="15" 
             oninput="calc_idade()"><!--Função calc_idade() que está definida na tag script-->
         </p>
 
@@ -256,10 +256,9 @@
                 <li>post: não mostra os dados na url</li>
             </ul>
         </li>
-        <li></li>
-        <li></li>
-        <li></li>
     </ul>
+
+
 
     <h2>Campos úteis do form</h2>
     <ul>
@@ -275,9 +274,9 @@
         <li>input type tel: telefone celular</li>
         <li>input type checkbox: campo para marcar/desmarcar. Aceita múltiplas marcações.</li>
         <li>input type radio: campo para marcar/desmarcar. Aceita várias marcações. Caso seja preciso delimitar uma escolha somente, usar o mesmo valor nos inputs para o parâmetro <strong>name</strong>.</li>
-        <li>input type color: O usuário escolhe uma cor. Pode ser definida uma inicial no parâmetro <strong>value</strong>, assumindo valor <strong>headecimal</strong>.</li>
+        <li>input type color: O usuário escolhe uma cor. Pode ser definida uma inicial no parâmetro <strong>value</strong>, assumindo valor <strong>hexadecimal</strong>.</li>
         <li>input type range: escolha numa escala. Podem ser definidos <strong>min</strong>, <strong>max</strong> e valor inicial com <strong>value</strong>. A tag output auxilia a mostrar qual o valor que está sendo definido no range.</li>
-        <li>input type file: permite o envio de arquivos. Não sar com método get.</li>
+        <li>input type file: permite o envio de arquivos. Não usar com método get.</li>
         <li>input type submit: botão para enviar as informações dos inputs</li>
         <li>input type reset: botão que limpa os campos</li>
         <li>name: útil para identificar o campo no HTML e PHP</li>
@@ -285,8 +284,8 @@
         <li>required: não assume nenhuma valor. Se inserido no input, não vai enviar os dados caso o campo esteja vazio.</li>
         <li>minlength: define o tamanho mínimo de caractéres para o campo</li>
         <li>maxlength: define o tamanho máximo de caractéres para o campo</li>
-        <li>min: valor mínimo que o campo precisa assumir</li>
-        <li>max: valor máximo que o campo precisa assumir (usando o preenchimento da setinha. O usuário pode escrever um valor maior)</li>
+        <li>min: valor mínimo que o campo precisa assumir (O usuário pode escrever um valor menor, mas o formulário não permite enviar)</li>
+        <li>max: valor máximo que o campo precisa assumir (O usuário pode escrever um valor maior, mas o formulário não permite enviar)</li>
         <li>size: define o tamanho da caixa para mostrar x caractéres</li>
         <li>placeholder: uma mensagem que vai aparecer dentro do campo antes do preenchimento</li>
         <li>value: um valor inicial para o campo. Caso seja definido, sobrepõe o placeholder</li>
@@ -295,7 +294,7 @@
         <li>checked: deixa marcado o campo radio/checkbox</li>
         <li>select: gera uma lista de opções para selecionar. Cada campo option value assume um valor. Podem ser agrupados com tag optgroup. Para definir um valor pré-selecionado, usar selected.</li>
         <li>datalist: Cria uma lista de opções que pode ser associada pelo seu id ao campo list do input. Cada campo option assume um valor. Dessa forma, o usuário pode digitar a entrada ou escolher dentre as opções.</li>
-        <li>textarea: campos para mensagem. Prâmetro cols delimita quantos caracteres por linha e rows quantas linhas (mas na verdade é infinito).</li>
+        <li>textarea: campo para mensagem. Prâmetro cols delimita quantos caracteres por linha e rows quantas linhas (mas na verdade é infinito).</li>
         <li>output: mostra algo na tela, mas não envia pelo formulário. A ele podem ser aplicadas resultados de funções para mostrar algo específico. Uma soma, por exemplo. Ela pode ser usada como auxiliar para mostar o valor da tag range.</li>
 
 

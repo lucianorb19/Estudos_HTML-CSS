@@ -6,7 +6,11 @@
     <style>
         body{
             font-family: Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 18px;
+            font-size: 1.3em;
+        }
+
+        p{
+            text-indent: 15px;
         }
     
         table{
@@ -58,6 +62,7 @@
 
         div#grandona{
             overflow: auto;
+            width: 90vw;
         }
 
         
@@ -115,7 +120,7 @@
     <table>
         <tbody>
             <tr>
-                <th>Nome</th>
+                <th scope="col">Nome</th>
                 <th>Valor (R$)</th>
             </tr>
             <tr>
@@ -127,7 +132,7 @@
                 <td>12.50</td>
             </tr>
             <tr>
-                <th>Total</th>
+                <th scope="row">Total</th>
                 <td>27.60</td>
             </tr>
         </tbody>
@@ -155,10 +160,10 @@
     <h2>Tabelas Grandes</h2>
     <p>Tabela maiores podem ser divididas em:
         <ul>
-            <li>caption - uma pequena frase que resume a tabela</li>
-            <li>thead - Table Head - Cabeçalho da tabela</li>
-            <li>tbody - Tabel Body - Corpo da tabela</li>
-            <li>tfoot - Table Foot - Pé da tabela</li>
+            <li><strong>caption</strong> - uma pequena frase que resume a tabela</li>
+            <li><strong>thead</strong> - Table Head - Cabeçalho da tabela</li>
+            <li><strong>tbody</strong> - Tabel Body - Corpo da tabela</li>
+            <li><strong>tfoot</strong> - Table Foot - Pé da tabela</li>
         </ul>
         Cada uma dessas estruturas pode conter tr, th e td.
     </p>
@@ -201,7 +206,7 @@
         </caption>
         <thead>
             <tr>
-                <th>Estado</th><th>População</th>
+                <th scope="col">Estado</th><th scope="col">População</th>
             </tr>
         </thead>
 
@@ -254,7 +259,7 @@
         
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num">00000</td>
             </tr>
 
@@ -264,7 +269,7 @@
     <h2>Mesclagem de Células</h2>
     <p>A mesclagem de células é feito usando os parâmetros <strong>colspan</strong> e <strong>rowspan</strong> diretamente nas células. <strong>colspan</strong> é usado para mesclar as células em colunas e <strong>rowspan</strong> em linhas.</p>
 
-    <p>Por exemplo, para que a célula B ocupe o espalo de duas células, e para que a célula D ocupe três linhas</p>
+    <p>Por exemplo, para que a célula B ocupe o espalo de duas colunas, e para que a célula D ocupe três linhas</p>
     <pre><code>
     colspan="2"
     rowspan="3"
@@ -298,7 +303,7 @@
     </table>
 
     <h2>Operações em Colunas</h2>
-    <p>Para realizar alguma mudança nas linhas, é necessário somente usar a tag tr. Para colunas, como não há uma tag específica na criação da tabela, o HTML5 trouxe uma nova tag, colgroup, e dentro dessa tag, é possível criar elementos col com classes, sendo cada um uma coluna da tabela, sendo o primeiro col a coluna mais a esquerda, e assim por diante. Por exemplo, a tabela:</p>
+    <p>Para realizar alguma mudança nas linhas, é necessário somente usar a tag tr. Para colunas, como não há uma tag específica na criação da tabela, o HTML5 trouxe uma nova tag, <mark>colgroup</mark>. Inserindo essa tag na estrutura da tag table, dentro dela é possível criar elementos col com classes, sendo cada um uma coluna da tabela, sendo o primeiro col a coluna mais a esquerda, e assim por diante. Por exemplo, a tabela:</p>
 
     <table>
         <tbody>
@@ -336,7 +341,7 @@
     E na CSS, configurar algo específico para cada class da col 
     <pre><code>
     col.col_nome{
-        background-color: gray;
+        background-color: green;
     }
     </code></pre>
 
@@ -370,7 +375,7 @@
         </tbody>
     </table>
 
-    <p>Tambem pode ser usado o parâmetro span dentro da tag col, para que a configuração da coluna se expanda para X colunas a direita dela.</p>
+    <p>Tambem pode ser usado o <mark>parâmetro span dentro da tag col</mark>, para que a configuração da coluna se expanda para X colunas a direita dela.</p>
     <pre><code>
     col class="col_nome" span="2"
     </code></pre>
