@@ -9,8 +9,7 @@
 
 html{
     font-family:Arial, Helvetica, sans-serif;
-    font-size: 1em;
-    text-align: justify;
+    font-size: 1.3em;
 }
 
 header{
@@ -41,6 +40,11 @@ article{
     /*Display block e margin auto para centralizar automaticamente*/
     display: block;
     margin: auto;
+}
+
+p{
+    text-align: justify;
+    text-indent: 15px;
 }
 
 footer,footer a{

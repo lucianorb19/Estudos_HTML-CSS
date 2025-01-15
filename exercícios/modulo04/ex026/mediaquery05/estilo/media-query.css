@@ -25,6 +25,6 @@ Telas grandes: acima de 1200
     }
 
     main{
-        max-width: 700px;/*Parte de leitura tem tamanho máximo de 769px*/
+        max-width: 769px;/*Parte de leitura tem tamanho máximo de 769px*/
     }
 }

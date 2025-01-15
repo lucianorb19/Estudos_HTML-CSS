@@ -38,7 +38,7 @@ menu{
 }
 
 menu > ul{
-    list-style-type: none;
+    list-style-type: none;/*Tira bolinhas da lista menu*/
 }
 
 menu > ul > li > a{
