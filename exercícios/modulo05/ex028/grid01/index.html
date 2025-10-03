@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout na prática</title>
+
+    <style>
+        
+        body{
+            font-family: Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.2em;
+        }
+
+        img{
+            border: 1px solid black;
+            display:block;
+            width: 25vw;
+            height: 30vh;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        div.container{
+            border: 2px solid blue;
+            height: 400px;
+            width: 400px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            gap: 5px;
+            
+        }
+
+        div.item{
+            border: 2px solid red;
+            padding: 5px;
+        }
+
+        div.container0{
+            border: 2px solid blue;
+            height: 400px;
+            width: 400px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            gap: 5px;
+            align-items: stretch;
+        }
+
+        div.container1{
+            border: 2px solid blue;
+            height: 400px;
+            width: 400px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            gap: 5px;
+            align-items: start;
+        }
+
+        div.container2{
+            border: 2px solid blue;
+            height: 400px;
+            width: 400px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            gap: 5px;
+            align-items: end;
+        }
+
+        div.container3{
+            border: 2px solid blue;
+            height: 400px;
+            width: 400px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            gap: 5px;
+            align-items: center;
+        }
+
+        div.container4{
+            border: 2px solid blue;
+            height: 400px;
+            width: 400px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            gap: 5px;
+            justify-items: stretch;
+        }
+
+         div.container5{
+            border: 2px solid blue;
+            height: 400px;
+            width: 400px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            gap: 5px;
+            justify-items: start;
+        }
+
+        div.container6{
+            border: 2px solid blue;
+            height: 400px;
+            width: 400px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            gap: 5px;
+            justify-items: end;
+        }
+
+        div.container7{
+            border: 2px solid blue;
+            height: 400px;
+            width: 400px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            gap: 5px;
+            justify-items: center;
+        }
+
+        div.containerContent{
+            border: 2px solid blue;
+            height: 400px;
+            width: 400px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            gap: 5px;
+            align-content: start;
+        }
+
+        div.containerContent1{
+            border: 2px solid blue;
+            height: 400px;
+            width: 400px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            gap: 5px;
+            align-content: end;
+        }
+
+        div.containerContent11{
+            border: 2px solid blue;
+            height: 400px;
+            width: 400px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            gap: 5px;
+            align-content: center;
+        }
+
+        div.containerContent2{
+            border: 2px solid blue;
+            height: 400px;
+            width: 400px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            gap: 5px;
+            align-content: space-between;
+        }
+
+        div.containerContent3{
+            border: 2px solid blue;
+            height: 400px;
+            width: 400px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            gap: 5px;
+            align-content: space-around;
+        }
+
+        div.containerContent4{
+            border: 2px solid blue;
+            height: 400px;
+            width: 400px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            gap: 5px;
+            align-content: space-evenly;
+        }
+
+        div.containerJustify1{
+            border: 2px solid blue;
+            height: 400px;
+            width: 400px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            gap: 5px;
+            justify-content: start;
+        }
+
+        div.containerJustify2{
+            border: 2px solid blue;
+            height: 400px;
+            width: 400px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            gap: 5px;
+            justify-content: end;
+        }
+
+        div.containerJustify3{
+            border: 2px solid blue;
+            height: 400px;
+            width: 400px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            gap: 5px;
+            justify-content: center;
+        }
+
+        div.containerJustify4{
+            border: 2px solid blue;
+            height: 400px;
+            width: 400px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            gap: 5px;
+            justify-content: space-between;
+        }
+
+        div.containerJustify5{
+            border: 2px solid blue;
+            height: 400px;
+            width: 400px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            gap: 5px;
+            justify-content: space-around;
+        }
+
+        div.containerJustify6{
+            border: 2px solid blue;
+            height: 400px;
+            width: 400px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            gap: 5px;
+            justify-content: space-evenly;
+        }
+
+
+        
+
+
+
+
+
+
+    </style>
+
+
+</head>
+<body>
+
+    <h1> Introdução</h1>
+    <img src="images/1.png" alt="grid track, row track, column track">
+    <img src="images/2.png" alt="grid line">
+    <img src="images/3.png" alt="numeração grid lines">
+    <img src="images/4.png" alt="grid gap">
+    <img src="images/5.png" alt="grid track, row track, column track">
+    
+    <h1>Exemplo 1</h1>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    
+    <h1>Propriedades de container</h1>
+    <ul type="circle">
+        <li>display</li>
+        <li>grid-template-columns</li>
+        <li>grid-template-rows</li>
+        <li>gap</li>
+        <li>align-items</li>
+        <li>justify-items</li>
+        <li>align-content</li>
+        <li>justify-content</li>
+    </ul>
+    <img src="images/6.png" alt="Propriedades container">
+
+    
+    <h2>align-items</h2>
+   <p>Alinhamento vertical de cada item da linha</p>
+
+    <pre><code>
+    padrão -> align-items: stretch;
+    </code></pre>
+    <div class="container0">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+
+  
+    <pre><code>
+    align-items: start;
+    </code></pre>
+    <div class="container1">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <pre><code>
+    align-items: end;
+    </code></pre>
+    <div class="container2">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <pre><code>
+    align-items: center;
+    </code></pre>
+    <div class="container3">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <h2>justify-items</h2>
+    <p>Alinhamento horizontal de cada item da linha</p>
+    <pre><code>
+    Padrão -> justify-items: stretch;
+    </code></pre>
+    <div class="container4">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <pre><code>
+    justify-items: start;
+    </code></pre>
+    <div class="container5">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <pre><code>
+    justify-items: end;
+    </code></pre>
+    <div class="container6">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <pre><code>
+    justify-items: center;
+    </code></pre>
+    <div class="container7">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <h2>align-content</h2>
+    <p>Alinhamento vertical de todo o bloco no conteiner</p>
+
+    <pre><code>
+    Padrão -> align-content: start;
+    </code></pre>
+    <div class="containerContent">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <pre><code>
+    align-content: end;
+    </code></pre>
+    <div class="containerContent1">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+        <pre><code>
+    align-content: center;
+    </code></pre>
+    <div class="containerContent11">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <pre><code>
+    align-content: space-between;
+    </code></pre>
+    <div class="containerContent2">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <pre><code>
+    align-content: space-around;
+    </code></pre>
+    <div class="containerContent3">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <pre><code>
+    align-content: space-evenly;
+    </code></pre>
+    <div class="containerContent4">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <h2>justify-content</h2>
+    <p>Alinhamento horizontal de todo o bloco no conteiner</p>
+    
+    <pre><code>
+    Padrão -> justify-content: start;
+    </code></pre>
+    <div class="containerJustify1">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <pre><code>
+    justify-content: end;
+    </code></pre>
+    <div class="containerJustify2">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <pre><code>
+    justify-content: center;
+    </code></pre>
+    <div class="containerJustify3">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <pre><code>
+    justify-content: space-between;
+    </code></pre>
+    <div class="containerJustify4">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <pre><code>
+    justify-content: space-around;
+    </code></pre>
+    <div class="containerJustify5">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <pre><code>
+    justify-content: space-evenly;
+    </code></pre>
+    <div class="containerJustify6">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+
+</body>
+</html>
