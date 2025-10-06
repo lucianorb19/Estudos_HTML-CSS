@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout na Prática - Parte 2</title>
+
+    <style>
+        body{
+            font-family: Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.2em;
+        }
+
+        p, pre, code{
+            margin: 5px;
+            margin: 5px;
+        }
+
+        img{
+            border: 1px solid black;
+            display:block;
+            width: 25vw;
+            height: 30vh;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        div.container{
+            border: 1px solid black;
+            height: 500px;
+            width: 500px;
+        }
+
+        div.item{
+            border: 1px solid red;
+        }
+
+        div#container1{
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+        }
+
+        div#container2{
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            grid-auto-rows: 100px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Demais propriedades de container</h1>
+    <ul type="circle">
+        <li>grid-auto-row</li>
+        <li>grid-auto-column</li>
+        <li>place-items</li>
+        <li>place-content</li>
+        <li>grid-template</li>
+    </ul>
+
+    <h2>grid-auto-row / grid-auto-column</h2>
+    <p>Considerando um container com um número explícito de linha e colunas, tais como:</p>
+    <pre><code>
+        div.container{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 100px 100px 100px;
+        }
+    </code></pre>
+
+<div class ="container" id="container1">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+    </div>
+
+    <p>Sempre que uma nova linha for adicionada ao container, essa linha vem deformada. Para que as configurações da linha se mantenham é preciso usar a propriedade <strong>grid-auto-row: 100px;</strong></p>
+
+    <pre><code>
+        div.container{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 100px 100px 100px;
+            <strong>grid-auto-row: 100px;</strong>
+        }
+    </code></pre>
+
+    <div class ="container" id="container2">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+    </div>
+
+    <p><strong>grid-auto-colum</strong> funciona da mesma forma, mas para a coluna.</p>
+
+    <h2>place-items / place-content</h2>
+    <p>Shorthands que simplifica as declarações de <strong>align-items e justify-items / align-content e justify-content.</strong> Lembrando que: primeiro o align, depois o justify.</p>
+
+    <p>Escrever:</p>
+    <pre><code>
+        div.container{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 100px 100px 100px;
+            align-items: center;
+            justify-items: stretch
+            align-content: start;
+            justify-content: space-around;
+        }
+    </code></pre>
+
+    <p>É o mesmo que</p>
+    <pre><code>
+    div.container{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 100px 100px 100px;
+        <strong>
+        place-items: center stretch;
+        place-content: start space-around;
+        </strong>
+    }
+    </code></pre>
+
+
+    <h2>grid-template</h2>
+    <p>Shorthand que simplifica a declaração de <strong>grid-template-row e grid-template-column</strong>. Lembrando que: primeiro a linha, depois a coluna.</p>
+    
+    <p>Escrever:</p>
+    <pre><code>
+    grid-template-rows: 100px 100px 100px;
+    grid-template-rows: auto auto auto;
+    </code></pre>
+
+    <p>É o mesmo que</p>
+    <pre><code>
+    grid-template: 100px 100px 100px / auto auto auto;
+    </code></pre>
+
+
+</body>
+</html>
