@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demais Propriedades</title>
+
+    <style>
+        body{
+                font-family: Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 1.2em;
+            }
+
+            p, pre, code{
+                margin: 5px;
+                margin: 5px;
+            }
+
+            img{
+                border: 1px solid black;
+                display:block;
+                width: 35vw;
+                height: 40vh;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+
+            div.container{
+                border: 1px solid black;
+                height: 500px;
+                width: 500px;
+            }
+
+            div.item{
+                border: 1px solid red;
+            }
+
+            div#container1{
+                display: grid;
+                grid-template-rows: repeat(3, 100px);
+                grid-template-columns: repeat(3, 100px);
+                gap:5px;
+                grid-auto-rows: 100px;
+                grid-auto-columns: 100px;
+                grid-auto-flow: row;
+            }
+
+            div#container2{
+                display: grid;
+                grid-template-rows: repeat(3, 100px);
+                grid-template-columns: repeat(3, 100px);
+                gap:5px;
+                grid-auto-rows: 100px;
+                grid-auto-columns: 100px;
+                grid-auto-flow: column;
+            }
+    </style>
+
+
+</head>
+
+<body>
+    <h1>grid-auto-flow</h1>
+    <p>Define qual a orientação para novos itens adicionados. Por exemplo, por padrão, o item J é adicionado na linha abaixo, dada as configurações</p>
+
+    <pre><code>
+    div.container{
+        display: grid;
+        grid-template-rows: repeat(3, 100px);
+        grid-template-columns: repeat(3, 100px);
+        gap:5px;
+        grid-auto-rows: 100px;
+    }
+    </code></pre>
+
+    <div class="container" id="container1">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+    </div>
+
+    <p>Isso porque sua configuração padrão é <strong>row</strong>. Caso seja mudado para <strong>colum</strong>, as inserções de cada item são feitas por coluna</p>
+   
+    <div class="container" id="container2">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+    </div>
+
+
+
+
+</body>
+</html>
