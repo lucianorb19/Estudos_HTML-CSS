@@ -19,8 +19,8 @@
         img{
             border: 1px solid black;
             display:block;
-            width: 25vw;
-            height: 30vh;
+            width: 35vw;
+            height: 40vh;
             margin-top: 5px;
             margin-bottom: 5px;
         }
@@ -47,6 +47,18 @@
             grid-template-rows: 100px 100px 100px;
             grid-auto-rows: 100px;
         }
+
+        div#container3{
+            display:grid;
+            grid-template-rows: auto auto auto;
+            grid-template-columns: 1fr 1fr 1fr ;
+        }
+
+        div#container4{
+            display:grid;
+            grid-template-rows: auto auto auto;
+            grid-template-columns: 1fr 2fr 1fr ;
+        }
     </style>
 
 </head>
@@ -58,6 +70,8 @@
         <li>place-items</li>
         <li>place-content</li>
         <li>grid-template</li>
+        <li>função repeat()</li>
+        <li>unidade fraction</li>
     </ul>
 
     <h2>grid-auto-row / grid-auto-column</h2>
@@ -140,12 +154,12 @@
 
 
     <h2>grid-template</h2>
-    <p>Shorthand que simplifica a declaração de <strong>grid-template-row e grid-template-column</strong>. Lembrando que: primeiro a linha, depois a coluna.</p>
+    <p>Shorthand que simplifica a declaração de <strong>grid-template-rows e grid-template-columns</strong>. Lembrando que: primeiro a linha, depois a coluna.</p>
     
     <p>Escrever:</p>
     <pre><code>
     grid-template-rows: 100px 100px 100px;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto;
     </code></pre>
 
     <p>É o mesmo que</p>
@@ -154,5 +168,65 @@
     </code></pre>
 
 
+    <h2>função repeat()</h2>
+    <p>Serve basicamente para simplificar a declaração de propriedades que são palavras repetidas. Por exemplo</p>
+    <pre><code>
+    grid-template-rows: auto auto auto;
+    </code></pre>
+
+    <p>Pode ser escrita</p>
+    <pre><code>
+    grid-template-rows: repeat(3, auto);
+    </code></pre>
+
+
+    <h2>Fraction</h2>
+    <p>Uma maneira de definir o tamanho das áreas de cada item do container usando a medida <strong>fr</strong></p>
+
+    <p>Exemplo: </p>
+
+    <pre><code>
+        div.container{
+            display:grid;
+            grid-template-rows: auto auto auto;
+            grid-template-columns: 1fr 1fr 1fr ;
+        }
+    </code></pre>
+
+    
+    <div class="container" id="container3">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+
+    <p>O tamanho das colunas é distribuído igualmente pela área de cada item. O que também poderia ter sido definido com o tamanho da coluna B sendo o dobro das demais</p>
+
+        <pre><code>
+        div.container{
+            display:grid;
+            grid-template-rows: auto auto auto;
+            grid-template-columns: 1fr 2fr 1fr ;
+        }
+    </code></pre>
+
+        <div class="container" id="container4">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+
+    <p>Também podem ser usadas medidas mistas na definição. Por, exemplo, um container de 1500px que se divide da seguinte forma:</p>
+
+    <pre><code>
+    div.container{
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 100px 20% 1fr 1fr
+    }
+    </code></pre>
+    <img src="images/7.png" alt="Medidas mistas no container">
+
+    <p>Destacando que, as medidas de fr usadas representam as frações <strong>da área não ocupada da linha, ou seja, no caso acima, 1100px livres divididos em duas colunas de 550px.</strong></p>
 </body>
 </html>
