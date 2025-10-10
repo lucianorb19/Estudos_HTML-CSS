@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 1</title>
+
+    <style>
+        body{
+                font-family: Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 1.2em;
+            }
+
+            p, pre, code{
+                margin: 5px;
+                margin: 5px;
+            }
+
+            img{
+                border: 1px solid black;
+                display:block;
+                width: 30vw;
+                height: 40vh;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+
+            div.container{
+                display: grid;
+                width: 60vw;
+                height: 60vh;
+                grid-template: repeat(9,1fr) / repeat(4, 1fr);
+                /*
+                grid-template-rows:repeat(9, 1fr);
+                grid-template-columns:repeat(4, 1fr);
+                */
+                grid-auto-rows:1fr;
+                grid-auto-columns: 1fr;
+                gap: 5px;
+                place-items: normal normal;
+                place-content: normal normal;
+                
+                /*
+                
+                */
+                
+            }
+
+            div.item{
+                background-color: rgba(127, 255, 212, 0.33);
+            }
+
+            div#topo{
+                grid-area: 1/1/3/-1;
+            }
+
+            div#menu{
+                grid-area: 3/1/4/-1;
+            }
+
+            div#principal{
+                grid-area:4/1/9/-2;
+            }
+
+            div#secundario{
+                grid-area: 4/4/9/-1;
+            }
+
+            div#rodape{
+                grid-area: 9/1/-1/-1;
+            }
+    </style>
+</head>
+<body>
+    <img src="images/10.png" alt="Desafio 1">
+
+    <div class="container">
+        <div class="item" id="topo">topo</div>
+        <div class="item" id="menu">menu</div>
+        <div class="item" id="principal">principal</div>
+        <div class="item" id="secundario">secundario</div>
+        <div class="item" id="rodape">rodape</div>
+    </div>
+
+</body>
+</html>

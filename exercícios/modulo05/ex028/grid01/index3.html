@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout - Items</title>
+
+    <style>
+        body{
+                font-family: Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 1.2em;
+            }
+
+            p, pre, code{
+                margin: 5px;
+                margin: 5px;
+            }
+
+            img{
+                border: 1px solid black;
+                display:block;
+                width: 40vw;
+                height: 40vh;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+
+            div.container{
+                display:grid;
+                border: 1px solid black;
+                height: 400px;
+                width: 600px;
+                grid-template-rows: repeat(3,1fr);
+                grid-template-columns: repeat(4, 1fr);
+                gap: 5px;
+            }
+
+            div#caixa1{
+                grid-row-start: 1;
+                grid-row-end: 2;
+                grid-column-start: 1;
+                grid-column-end: -1; /*ÚLTIMA COLUNA*/
+                background-color: rgba(255, 0, 0, 0.31);
+            }
+
+            div#caixa2{
+                grid-row-start: 2;
+                grid-row-end: 4;
+                grid-column-start: 1;
+                grid-column-end: 3;
+                background-color: rgba(0, 255, 255, 0.29);
+            }
+
+            div#caixa3{
+                grid-row-start: 2;
+                grid-row-end: 4;
+                grid-column-start: 3;
+                grid-column-end: 5;
+                background-color: rgba(172, 255, 47, 0.312);
+            }
+
+            div#caixa4{
+                grid-area: 1 / 1 / 4 / 3;
+                background-color: rgba(127, 255, 212, 0.32);
+            }
+
+    </style>
+</head>
+<body>
+    <h1>Propriedades para itens</h1>
+    <ul>
+        <li>grid-row-start</li>
+        <li>grid-row-end</li>
+        <li>grid-column-start</li>
+        <li>grid-column-end</li>
+    </ul>
+
+    <p>Essas quatro propriedades iniciais são utilizadas para <strong>definir uma grid area</strong>.</p>
+    <img src="images/8.png" alt="Definindo grid areas">
+
+    <h2>Exemplo</h2>
+
+    <pre><code>
+    div.container{
+                display:grid;
+                border: 1px solid black;
+                height: 400px;
+                width: 600px;
+                grid-template-rows: repeat(3,100px);
+                grid-template-columns: repeat(4, 1fr);
+                gap: 5px;
+            }
+
+            div#caixa1{
+                grid-row-start: 1;
+                grid-row-end: 2;
+                grid-column-start: 1;
+                grid-column-end: -1; /*ÚLTIMA COLUNA*/
+                background-color: rgba(255, 0, 0, 0.31);
+            }
+
+            div#caixa2{
+                grid-row-start: 2;
+                grid-row-end: 4;
+                grid-column-start: 1;
+                grid-column-end: 3;
+                background-color: rgba(0, 255, 255, 0.29);
+            }
+
+            div#caixa3{
+                grid-row-start: 2;
+                grid-row-end: 4;
+                grid-column-start: 3;
+                grid-column-end: 5;
+                background-color: rgba(172, 255, 47, 0.312);
+            }
+    </code></pre>
+
+    <div class="container">
+        <div id="caixa1">Caixa 1</div>
+        <div id="caixa2">Caixa 2</div>
+        <div id="caixa3">Caixa 3</div>
+    </div>
+
+    <p>Outra maneira de representar uma grid área é usando <strong>span</strong> para definir quantas linhas a caixa se expande a partir de sua grid-row/grid-column inicial. Por exemplo, para uma caixa que cuja grid-row inicial é 1 e vai até a grid-row 4 e a grid-column inicial é 1 e vai até a grid-column 3</p>
+
+    <img src="images/9.png" alt="Uso de span para grid-areas">
+
+    <div class="container">
+        <div id="caixa4">Caixa 4</div>
+    </div>
+
+    <h2>Shorthands</h2>
+    <p>Para <strong>grid-row-start e grid-row-end</strong> -> <strong>grid-row.</strong> <br>
+       Para <strong>grid-column-start e grid-column-end</strong> -> <strong>grid-column</strong></p>
+
+    <pre><code>
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    </code></pre>
+
+    <p>É o mesmo que:</p>
+    <pre><code>
+    grid-row: 2/4;
+    grid-column: 3/5;
+    </code></pre>
+
+    <p>Há também o shorthand ainda mais simplificado. <strong>grid-area</strong>.</p>
+    <pre><code>
+    grid-area: 2/3/4/5; 
+    /*
+    2 - grid-row-start
+    3 - grid-column-start
+    4 - grid-row-end
+    5 - grid-column-end
+    */
+    </code></pre>
+
+</body>
+</html>
